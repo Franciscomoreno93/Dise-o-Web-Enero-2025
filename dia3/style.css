@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.div1 {
+    background-color: blue;
+    width: 250px;
+    height: 250px;
+    padding: 0px;
+    border-top: 1px solid black;
+    border-bottom: 4px solid black;
+    border-style: dashed dotted;
+    margin: 25% auto;
+}
+
+.div2 {
+    background-color: purple;
+    width: 50%;
+    height: 50%;
+    margin: 25% auto;
+    border-bottom: 3px dotted yellow;
+}

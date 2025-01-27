@@ -1,0 +1,21 @@
+body, html{
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: url(skatephoto.jpeg) center;
+    background-size: cover;
+}
+
+.contenedor {
+    text-align: center;
+    padding: 20px;
+    background-color: #fffbe6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+.boton-redireccion {
+
+}

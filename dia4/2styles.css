@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: cursive;
+    font-weight: 500;
+    font-style: oblique;
+    font-size: 50px;
+    text-align: center;
+}
+
+div{
+    background-color: #ff000055;
+    padding: 25px;
+    border-radius: 20px;
+    margin: 30px 15px;
+    text-align: center;
+}
+
+p{
+    text-align: justify;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+button{
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+}
+
+button:hover {
+    box-shadow: 0 0 5px cyan, 0 0 5px cyan, 0 0 5px cyan, 0 0 5px cyan, 0 0 5px cyan;
+}
