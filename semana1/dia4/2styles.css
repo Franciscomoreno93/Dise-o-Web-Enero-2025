@@ -7,9 +7,9 @@
 
 h1{
     font-family: cursive;
-    font-weight: 500;
-    font-style: oblique;
-    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
     text-align: center;
 }
 
@@ -26,8 +26,9 @@ p{
 }
 
 img{
-    width: 100%;
-    height: auto;
+    width: 90%;
+    border-radius: 12px;
+    margin: 5%;
 }
 
 button{

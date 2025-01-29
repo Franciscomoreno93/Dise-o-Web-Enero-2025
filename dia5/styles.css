@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(194, 217, 255);
+    height: 75px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid rgb(25, 4, 130);
+}
+
+.icon{
+    width: 100px;
+    position: relative;
+}
+
+ul li{
+    display: inline;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+li{
+    color: black;
+    cursor: pointer;
+
+}
+
+li:hover{
+    color: rgb(142, 143, 250);
+}
+
+main{
+    padding: 15px;
+    min-height: calc(100vh - 125px);
+    display: flex;
+    flex-direction: column;
+}
+
+p{
+    padding: 40px 0;
+    text-align: justify;
+}
+
+.photos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo{
+    width: calc(50vw - 40px);
+    height: calc(50vw - 40px);
+    margin: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 48px 0;
+    transition: box-shadow 0.3s;
+}
+
+.photo:hover{
+    box-shadow: 0px 0px 4px 2px rgb(194, 217, 255);
+}
+
+.photo-1{
+    background-image: url(../dia5/images/skatephoto.jpg);
+}
+
+.photo-2{
+    background-image: url(../dia5/images/skatephoto2.webp);
+}
+
+.photo-3{
+    background-image: url(../dia5/images/skatephoto3.jpg);
+}
+
+.photo-4{
+    background-image: url(../dia5/images/skatephoto4.jpg);
+}
+
+footer{
+    background-color: rgb(194, 217, 255);
+    height: 50px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 7px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 3px solid rgb(25, 4, 130);
+}
+
+footer a{
+   color: black; 
+   text-decoration: none;
+}
+
+footer a:hover{
+    color: rgb(142, 143, 250);
+}

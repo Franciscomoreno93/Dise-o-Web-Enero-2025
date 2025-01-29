@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: rgb(194, 217, 255);
+    height: 75px;
+    padding: 15px;
+}
+
+img{
+    width: 50px;
+}
+
+nav{
+    float: right;
+}
+
+ul li{
+    display: inline;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+li{
+    padding-left: 15px;
+    color: black;
+    cursor: pointer;
+
+}
+
+li:hover{
+    color: rgb(142, 143, 250);
+}

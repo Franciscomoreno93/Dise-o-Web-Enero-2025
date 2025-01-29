@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+div{
+    border: 1px solid black;
+    border-radius: 12px;
+    margin: 15px;
+    display: inline-block;
+}
+
+.div1{
+    background-color: aqua;
+    width: 250px;
+    height: 140px;
+}
+
+.div2{
+    background-color: black;
+    width: 90px;
+    height: 45px;
+}
+
+.div3{
+    background-color: blue;
+    width: 200px;
+    height: 150px;
+}
