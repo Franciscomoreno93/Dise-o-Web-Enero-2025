@@ -1,11 +1,22 @@
-* {
+*{
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
 }
 
-header {
+body{
+    background-image: url(yuto.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    
+}
+
+header{
     background-color: rgb(194, 217, 255);
     height: 75px;
     padding: 15px;
@@ -15,45 +26,53 @@ header {
     border-bottom: 3px solid rgb(25, 4, 130);
 }
 
-.icon {
+.icon{
     width: 100px;
     position: relative;
 }
 
-ul li {
+ul li{
     display: inline;
     font-weight: bold;
     font-size: 25px;
 }
 
-li {
-    color: black;
-    cursor: pointer;
+li{
+    padding-left: 15px;
 
 }
 
-li:hover {
-    color: rgb(142, 143, 250);
+header nav li a{
+    color: rgb(25, 4, 130);
+    text-decoration: none;
 }
 
-main {
+header nav li.active{
+    color: white;
+}
+
+header nav li:hover{
+    color: rgb(25, 4, 130);
+}
+
+main{
     padding: 15px;
     min-height: calc(100vh - 125px);
     display: flex;
     flex-direction: column;
 }
 
-p {
+p{
     padding: 40px 0;
     text-align: justify;
 }
 
-.photos {
+.photos{
     display: flex;
     flex-wrap: wrap;
 }
 
-.photo {
+.photo{
     width: calc(50vw - 44px);
     height: calc(50vw - 44px);
     margin: 10px;
@@ -64,27 +83,27 @@ p {
     transition: box-shadow 0.3s;
 }
 
-.photo:hover {
+.photo:hover{
     box-shadow: 0px 0px 4px 2px rgb(194, 217, 255);
 }
 
-.photo-1 {
+.photo-1{
     background-image: url(../dia5/images/skatephoto.jpg);
 }
 
-.photo-2 {
+.photo-2{
     background-image: url(../dia5/images/skatephoto2.webp);
 }
 
-.photo-3 {
+.photo-3{
     background-image: url(../dia5/images/skatephoto3.jpg);
 }
 
-.photo-4 {
+.photo-4{
     background-image: url(../dia5/images/skatephoto4.jpg);
 }
 
-footer {
+footer{
     background-color: rgb(194, 217, 255);
     height: 50px;
     text-align: center;
@@ -97,11 +116,11 @@ footer {
     border-top: 3px solid rgb(25, 4, 130);
 }
 
-footer a {
-    color: black;
-    text-decoration: none;
+footer a{
+   color: black; 
+   text-decoration: none;
 }
 
-footer a:hover {
+footer a:hover{
     color: rgb(142, 143, 250);
 }
