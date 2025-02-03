@@ -5,8 +5,14 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: url(descarga\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 header {
-    background-color: rgb(194, 217, 255);
+    background-color: none;
     height: 75px;
     padding: 15px;
     display: flex;
