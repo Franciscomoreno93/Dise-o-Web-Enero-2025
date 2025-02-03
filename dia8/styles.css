@@ -1,3 +1,5 @@
+/* General */
+
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +13,9 @@ body{
     line-height: 1.6;
 }
 
-header{
+/* Header (Bloque: header) */
+
+.header{
     background: #190482;
     color: white;
     padding: 20px;
@@ -22,30 +26,32 @@ header{
     gap: 10px;
 }
 
-.logo{
+.header__logo{
     width: 150px;
     height: 110px;
 }
 
-nav ul{
+.header__nav{
     list-style: none;
     padding: 10px;
 }
 
-nav ul li{
+.header__nav-item{
     display: inline;
     margin: 0 15px;
 }
 
-nav ul li a{
+.header__nav-link{
     color: white;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav ul li a:hover{
+.header__nav-link:hover{
     text-decoration: underline;
 }
+
+/* Section Inicio */
 
 .inicio{
     color: white;
@@ -53,7 +59,7 @@ nav ul li a:hover{
     padding: 100px 20px;
 }
 
-#inicio{
+.inicio__background {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,13 +72,15 @@ nav ul li a:hover{
     background-repeat: no-repeat;
 }
 
-main{
+/* Main */
+
+.main{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.section{
+.main__section{
     padding: 50px;
     text-align: center;
     background: white;
@@ -81,20 +89,24 @@ main{
     box-shadow: 0px 4px 8px rgba( 0, 0, 0, 0.1);
 }
 
-.video-container{
+/* Video Container */
+
+.main__video-container{
     position: relative;
     width: 100%;
     max-width: 560px;
     margin: auto;
 }
 
-.video-container iframe{
+.main__video-container iframe{
     max-width: 100%;
     border-radius: 5px;
     height: 315px;
 }
 
-footer{
+/* Footer */
+
+.footer{
     background: #8e8ffa;
     color: white;
     text-align: center;
@@ -103,25 +115,47 @@ footer{
     justify-content: space-around;
 }
 
+.footer__list{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.footer__link{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.footer__link:hover{
+    color: f2d9ff;
+}
+
+/* Media Queries */
+
 @media (max-width: 600px) {
-    header{
+    .header{
         flex-direction: column;
     }
-    nav ul{
+    .header__nav{
         display: flex;
         flex-direction: column;
         text-align: center;
     }
-    nav ul li{
+    .header__nav-item{
         margin: 10px 0;
     }
-    .productos-container{
+    .productos{
         flex-direction: column;
         align-items: center;
     }
 }
 
-.productos-container{
+/* Prodcutos Container */
+
+.productos {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -131,7 +165,7 @@ footer{
     white-space: nowrap;
 }
 
-.producto{
+.productos__item{
     background: #fff;
     padding: 15px;
     text-align: center;
@@ -139,33 +173,29 @@ footer{
     box-shadow: 0px 4px 8px rgba( 0, 0, 0, 0.1);
     width: 250px;
     transition: 0.3s;
-    flex: 0 0 250px;
-    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-.producto:hover{
+.productos__item:hover{
     transform: scale(1.05);
 }
 
-.producto img{
+.productos__img{
     width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.producto h3{
+.prodcutos__title{
     margin-top: 10px;
     text-align: center;
     min-height: 40px;
 }
 
-.producto p{
+.producto__description{
     font-size: 14px;
     color: #555;
     text-align: center;
