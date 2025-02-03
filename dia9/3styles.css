@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div{
+    background-color: azure;
+    border: 1px solid black;
+    width: 50vw;
+    height: 50vh;
+    transition: background-color .3s;
+}
+
+@media (max-width: 480px) {
+    div{
+        background-color: red;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 780px) {
+    div{
+        background-color: yellow;
+    }
+}
+
+@media (min-width: 781px) and (max-width: 1200px) {
+    div{
+        background-color: green;
+    }
+}
+
+@media (min-width: 1201px) {
+    div{
+        background-color: blue;
+    }
+}
