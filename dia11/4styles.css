@@ -1,0 +1,27 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: white;
+}
+
+figure{
+    display: inline-block;
+    background-color: #c2d9ff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 80%;
+}
+
+figure img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+figcaption{
+    font-size: 1.1em;
+    color: #8e8ffa;
+    margin-top: 10px;
+}

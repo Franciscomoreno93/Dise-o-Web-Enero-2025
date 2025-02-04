@@ -1,0 +1,29 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: felx;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    flex: 2;
+    padding: 20px;
+    background-color: blue;
+}
+
+aside{
+    flex: 1;
+    padding: 20px;
+    background-color: blueviolet;
+}
+
+figure{
+    margin: 20px 0;
+    text-align: center;
+}
+
+figure img{
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
