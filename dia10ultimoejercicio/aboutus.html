@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aboutus.css">
+    <title>Web Nueva</title>
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="logo" class="logo">
+        <h1>The Coach Sneakers</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="products.html">Productos</a></li>
+                <li><a href="aboutus.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Contacto</h1>
+            <p>Si necesitas ayuda, buscas algun modelo en concreto o quieres ponerte en contacto con nosotros
+                completando el siguiente cuestionario:</p>
+
+            <form action="#" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <h2>Ubicación</h2>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12681.053706605508!2d-5.996869442940961!3d37.38360205338091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd126c394a7636c7%3A0x2d81bc33cd395f44!2sCEI%3A%20Centro%20de%20Estudios%20Innovaci%C3%B3n!5e0!3m2!1ses!2ses!4v1738329876167!5m2!1ses!2ses"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="https://facebook.com">Facebook</a>
+        <a href="https://youtube.com">Youtube</a>
+        <a href="https://instagram.com">Instagram</a>
+    </footer>
+</body>
+
+</html>
