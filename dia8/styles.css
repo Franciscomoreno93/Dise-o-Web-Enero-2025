@@ -27,8 +27,12 @@ body{
 }
 
 .header__logo{
-    width: 150px;
+    width: 100px;
     height: 110px;
+}
+
+.header__logo-image{
+    width: 100%;
 }
 
 .header__nav{
@@ -49,6 +53,10 @@ body{
 
 .header__nav-link:hover{
     text-decoration: underline;
+}
+
+element.style {
+    width: 100%;
 }
 
 /* Section Inicio */

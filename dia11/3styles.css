@@ -1,0 +1,47 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: aqua;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav{
+    background-color: blue;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a{
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main{
+    padding: 1.25rem;
+}
+
+section{
+    margin-bottom: 1.25rem;
+}
+
+article{
+    background: #f4f4f4;
+    padding: .9375rem;
+    margin-top: .625rem
+}
+
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: .625rem 0;
+    margin-top: 1.25rem;
+}
