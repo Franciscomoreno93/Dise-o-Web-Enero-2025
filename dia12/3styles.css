@@ -1,0 +1,38 @@
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li{
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.contenido{
+    margin-top: 4.375rem;
+    padding: 1.25rem;
+}
+
+.clasep{
+    height: 93.75rem;
+}

@@ -1,0 +1,20 @@
+.claseuno{
+    position: relative;
+    width: 18.75rem;
+    height: 12.5rem;
+    background-color: lightseagreen;
+    border: 2px solid black;
+}
+
+.clasedos{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3.125rem;
+    height: 3.125rem;
+    background-color: lightslategray;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

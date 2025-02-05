@@ -1,0 +1,8 @@
+.mover{
+    position: relative;
+    left: 1.25rem;
+    top: .625rem;
+    width: 6.25rem;
+    height: 6.25rem;
+    background-color: lightcoral;
+}
