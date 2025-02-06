@@ -1,13 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
 .contenedor{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(50%, 50%);
-    width: 200px;
-    height: 100px;
+    width: 12.5rem;
+    height: 6.25rem;
     background-color: blue;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid black;
 }
