@@ -1,0 +1,9 @@
+.contenedor{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: lightpink;
+    border: 2px solid black;
+    width: 6.25rem;
+    height: 6.25rem;
+}

@@ -187,7 +187,7 @@ element.style {
     transform: scale(1.05);
 }
 
-.productos__img{
+.productos__image{
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
