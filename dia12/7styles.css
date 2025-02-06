@@ -1,6 +1,26 @@
-*{
-    margin: auto;
+body{
+    margin: 0;
     padding: 0;
-    border: 0;
-    box-sizing: border-box;
+    height: 100%;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: lightgoldenrodyellow;
+}
+
+.centrado{
+    width: 18.75rem;
+    height: 9.375rem;
+    margin: 0 auto;
+    background-color: lightsalmon;
+    color: black;
+    text-align: center;
+    line-height: 9.375rem;
+    font-size: 1.125rem;
+    border-radius: 10px;
+    border: 2px solid black;
 }
