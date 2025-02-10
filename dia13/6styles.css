@@ -88,7 +88,7 @@ footer::after{
     bottom: 5px;
     right: 10px;
     font-size: 12px;
-    color: #ccc;
+    color: white;
 }
 
 @media (max-width: 768px) {
