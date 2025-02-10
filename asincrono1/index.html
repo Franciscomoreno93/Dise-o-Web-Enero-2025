@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Header Responsive</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockholm</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <header class="header">
-    <div class="header__container">
+    <header class="header">
+        <div class="header__logo">
+            <img src="../asincrono1/imagenes/logoblack.png" alt="Logo de Stockholm">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__item"><a href="#" class="header__link">Main</a></li>
+                <li class="header__item"><a href="#" class="header__link">About</a></li>
+                <li class="header__item"><a href="#" class="header__link">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header__menu-icon">
+            &#9776;
+        </div>
+    </header>
 
-      <img src="logo.png" alt="Logo" class="header__logo">
+    <main class="grid">
+        <div class="grid__item grid__item--large"><p>The Vow</p></div>
+        <div class="grid__item"><p>Beauty is in the Eye of the Observer</p></div>
+        <div class="grid__item"><p>Q</p></div>
+        <div class="grid__item"><p>KATA</p></div>
+        <div class="grid__item"><p>Stay close to nature. It will never fail you.</p></div>
+        <div class="grid__item"><p>soho</p></div>
+        <div class="grid__item"><p>moma</p></div>
+        <div class="grid__item"><p>2</p></div>
+        <div class="grid__item"><p>To</p></div>
+        <div class="grid__item"><p>Elaf</p></div>
+        <div class="grid__item"><p>Beauty in the Eye of the Observer</p></div>
+        <div class="grid__item"><p>Prome</p></div>
+        <div class="grid__item"><p>Tromso</p></div>
+    </main>
 
-
-      <input type="checkbox" id="menu-toggle" class="header__menu-checkbox">
-      <label for="menu-toggle" class="header__menu-button">
-        <span class="header__menu-icon"></span>
-        <span class="header__menu-icon"></span>
-        <span class="header__menu-icon"></span>
-      </label>
-
-
-      <nav class="header__nav">
-        <ul class="header__menu">
-          <li class="header__menu-item"><a href="#" class="header__menu-link">Inicio</a></li>
-          <li class="header__menu-item"><a href="#" class="header__menu-link">Servicios</a></li>
-          <li class="header__menu-item"><a href="#" class="header__menu-link">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <footer class="footer">
+        <p class="footer__text">Stockholm</p>
+        <p class="footer__info">© 2024 Todos los derechos reservados</p>
+    </footer>
 
 </body>
-
 </html>
