@@ -1,48 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surf Adventure</title>
     <link rel="stylesheet" href="6styles.css">
-    <title>Document</title>
 </head>
-
 <body>
     <header>
+        <h1>Surf Adventure</h1>
         <nav>
-            <ul class="nav-links">
+            <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#acerca">Acerca del Surf</a></li>
+                <li><a href="#servicios">Cursos y Equipos</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
+    <aside>
+        <h2>Explora</h2>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca">Historia del Surf</a></li>
+            <li><a href="#servicios">Clases y Alquiler</a></li>
+            <li><a href="#contacto">Únete a la Comunidad</a></li>
+        </ul>
+    </aside>
     <main>
-        <section id="inicio" class="section">
-            <h1>Bienvenido a la página</h1>
-            <p>Explora nuestra galería y conoce más sobre nosotros</p>
+        <section class="hero" id="inicio">
+            <h2>Bienvenido a Surf Adventure</h2>
+            <p>Vive la emoción de las olas.</p>
         </section>
-        <section id="galeria" class="section">
-            <h2>Galería</h2>
-            <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/sX-KDxOimNs?si=qff-lzyDw3YFiC4P"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                </iframe>
-            </div>
+        <section class="content" id="acerca">
+            <h2>Acerca del Surf</h2>
+            <p>Descubre la historia y la pasión detrás de este increíble deporte.</p>
         </section>
-        <section id="contacto" class="section">
+        <section class="content" id="servicios">
+            <h2>Cursos y Equipos</h2>
+            <p>Aprende con los mejores instructores y alquila el mejor equipo para surfear.</p>
+        </section>
+        <section class="content" id="contacto">
             <h2>Contacto</h2>
-            <p>Puedes contactarnos en el correo: <a href="mailto:contacto@ejemplo.com">contacto@ejemplo.com</a></p>
+            <p>Únete a nuestra comunidad y comparte la pasión por el surf.</p>
+        </section>
+        <section class="relative-box">
+            <p>Este es un section con <strong>position: relative</strong><3.</p>
+            <div class="absolute-box">Oferta Especial</div>
         </section>
     </main>
     <footer>
-        <a href="https://facebook.com">Facebook</a>
-        <a href="https://youtube.com">Youtube</a>
-        <a href="https://instagram.com">Instagram</a>
+        <p>&copy; 2024 Surf Adventure. Vive las olas, siente la libertad.</p>
     </footer>
 </body>
-
 </html>
