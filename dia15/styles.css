@@ -1,0 +1,14 @@
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.logo-container a {
+    display: block;
+}
+.logo-container img {
+    width: 250px;
+    height: auto;
+}
