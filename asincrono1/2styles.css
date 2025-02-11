@@ -60,13 +60,13 @@ body {
 /* GRID */
 .grid {
     display: grid;
-    width: calc(100vw - 20px); /* 10px de margen a cada lado */
+    width: calc(100vw - 20px); 
     height: auto;
     margin: 10px;
-    gap: 5px; /* Espacio entre imágenes */
+    gap: 5px; 
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    flex-grow: 1; /* Permite que el main crezca pero sin empujar el footer */
+    flex-grow: 1; 
 }
 
 .grid__item {
@@ -83,22 +83,39 @@ body {
 }
 
 /* Ajustes de tamaño */
-.grid__item--large { grid-column: span 2; grid-row: span 2; } /* 2x2 */
-.grid__item--wide { grid-column: span 2; } /* 2 columnas */
-.grid__item--tall { grid-row: span 2; } /* 2 filas */
+.grid__item--large { grid-column: span 2; grid-row: span 2; } 
+.grid__item--wide { grid-column: span 2; } 
+.grid__item--tall { grid-row: span 2; } 
 
 /* FOOTER */
 .footer {
-    padding: 20px;
-    background-color: #fff;
-    border-top: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    flex-shrink: 0; /* Evita que el footer se mezcle con el main */
+    height: 200px; /* Ajusta el grosor del footer */
+    background-color: #fff;
+    padding: 20px;
 }
 
+/* Contenedor interno */
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Imagen del logo */
+.footer__logo {
+    max-width: 100px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-bottom: 10px; /* Espaciado entre logo y texto */
+}
+
+/* Texto del footer */
 .footer__text {
     font-size: 14px;
-    color: #777;
+    color: #333;
 }
 
 /* RESPONSIVE */
