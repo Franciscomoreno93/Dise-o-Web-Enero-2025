@@ -1,0 +1,119 @@
+/* Fuente Wu-Tang */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(wu-tang-clan-4k-2z0pv9fbji4f6oxx.jpg) no-repeat center center/cover;
+    font-family: 'Russo One', sans-serif;
+    color: #FFD700; /* Amarillo Wu-Tang */
+    display: flex;
+}
+
+/* Header Sticky */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* Menú Lateral */
+aside {
+    position: fixed;
+    left: 0;
+    top: 60px; /* Debajo del header */
+    width: 200px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Transparente */
+    padding-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFD700;
+    display: block;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 215, 0, 0.3);
+    border-left: 4px solid #FFD700;
+}
+
+/* Contenido Principal */
+main {
+    margin-left: 220px; /* Para no solaparse con el aside */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    width: calc(100% - 220px);
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+audio {
+    width: 100%;
+    max-width: 300px;
+    filter: drop-shadow(0px 0px 10px #FFD700);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    aside {
+        width: 150px;
+    }
+
+    main {
+        margin-left: 160px;
+        width: calc(100% - 160px);
+    }
+}
+
+@media (max-width: 480px) {
+    aside {
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
