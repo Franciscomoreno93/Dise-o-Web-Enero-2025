@@ -1,0 +1,32 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    grid-template-rows: repeat(3, 1fr); /* 3 filas */
+    grid-auto-flow: column; /* Llenado por columnas */
+    gap: 10px;
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+  }
+
+  .box {
+    display: flex;
+    align-items: flex-start; /* Alinear arriba */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    font-size: 14px; /* Tamaño más pequeño */
+    font-weight: bold;
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 5px; /* Espacio para separar el número del borde */
+  }
+
+  .box:nth-child(odd) { /* Impares - color oscuro */
+    background-color: #333;
+    color: white;
+  }
+
+  .box:nth-child(even) { /* Pares - color gris claro */
+    background-color: #ccc;
+    color: black;
+  }
