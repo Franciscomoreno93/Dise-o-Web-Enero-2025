@@ -1,0 +1,54 @@
+/* Estilos Generales */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d9b6f2;
+    margin: 0;
+}
+
+/* Contenedor Principal */
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Texto con Sombra */
+.text-shadow {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 5px;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
+    margin: 10px;
+}
+
+/* Contenedor de Cajas con Sombras */
+.shadow-boxes {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* Cajas de Sombras */
+.optimized-shadow {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Sombra Optimizada */
+.shadow-optimized {
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.2);
+}
