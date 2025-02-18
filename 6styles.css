@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: lightcoral;
+}
+
+.container{
+    display: flex;
+    gap: 20px;
+    perspective: 500px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.box1 {
+    background-color: blue;
+    transform: rotateX(30deg);
+}
+
+.box2 {
+    background-color: blueviolet;
+    transform: rotateY(45deg);
+}
+
+.box3 {
+    background-color: lightsalmon;
+    transform: rotateZ(60deg)
+}
