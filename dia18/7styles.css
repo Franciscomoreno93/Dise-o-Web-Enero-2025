@@ -22,32 +22,26 @@ h1 {
     border-radius: 10px;
 }
 
-/* Degradado 1 - Lineal de naranja a rosa */
 .gradient1 {
     background: linear-gradient(to right, orange, pink);
 }
 
-/* Degradado 2 - Lineal de rojo a fucsia */
 .gradient2 {
     background: linear-gradient(to right, red, fuchsia);
 }
 
-/* Degradado 3 - Lineal de azul a negro */
 .gradient3 {
     background: linear-gradient(to right, blue, black);
 }
 
-/* Degradado 4 - Diagonal de azul a naranja */
 .gradient4 {
     background: linear-gradient(45deg, blue, orange);
 }
 
-/* Degradado 5 - Diagonal de amarillo a azul */
 .gradient5 {
     background: linear-gradient(135deg, yellow, blue);
 }
 
-/* Degradado 6 - Arcoíris */
 .gradient6 {
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
 }
