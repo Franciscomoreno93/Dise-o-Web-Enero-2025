@@ -1,0 +1,17 @@
+.contenedor{
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightcoral;
+}
+
+.interior{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 50px;
+    background-color: lightblue;
+}

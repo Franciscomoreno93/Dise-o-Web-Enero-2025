@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+.image-container{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.normal img { mix-blend-mode: normal; }
+.multiply img { mix-blend-mode: multiply; }
+.screen img { mix-blend-mode: screen; }
+.overlay img { mix-blend-mode: overlay; }
+.darken img { mix-blend-mode: darken; }
+.lighten img { mix-blend-mode: lighten; }
+.color-dodge img { mix-blend-mode: color-dodge; }
+.color-burn img { mix-blend-mode: color-burn; }
+.hard-light img { mix-blend-mode: hard-light; }
+.soft-light img { mix-blend-mode: soft-light; }
+.difference img { mix-blend-mode: difference; }
+.exclusion img { mix-blend-mode: exclusion; }
+.hue img { mix-blend-mode: hue; }
+.saturation img { mix-blend-mode: saturation; }
+.color img { mix-blend-mode: color; }
+.luminosity img { mix-blend-mode: luminosity; }
