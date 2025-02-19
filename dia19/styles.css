@@ -36,9 +36,9 @@ body {
 .box3:hover {
     width: 200px;
     height: 200px;
-}
+} 
 
-@keyframes chageSize {
+/* @keyframes changeSize {
     0% {
         transform: scale(1);
     }
@@ -48,5 +48,5 @@ body {
 }
 
 .box1:hover, .box2:hover, .box3:hover {
-    animation: chageSize 0.5s ease-in-out;
-}
+    animation: changeSize 0.5s ease-in-out;
+} */

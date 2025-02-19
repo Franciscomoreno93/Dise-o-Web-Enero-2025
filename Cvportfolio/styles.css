@@ -216,6 +216,7 @@ span{
     content: "Web Designer";
     color: var(--main-color);
     animation: words 20s infinite;
+    font-size: 50px;
 }
 
 .text-animation span::after{
