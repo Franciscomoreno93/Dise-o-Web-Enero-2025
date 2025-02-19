@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+    background-color: #f4f4f4;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    transition: all 0.5s ease-in-out;
+}
+
+.box1 {
+    background-color: red;
+}
+
+.box2 {
+    background-color: blue;
+}
+
+.box3 {
+    background-color: green;
+}
+
+.box1:hover {
+    width: 200px;
+}
+
+.box2:hover {
+    height: 200px;
+}
+
+.box3:hover {
+    width: 200px;
+    height: 200px;
+}
+
+@keyframes chageSize {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.box1:hover, .box2:hover, .box3:hover {
+    animation: chageSize 0.5s ease-in-out;
+}
