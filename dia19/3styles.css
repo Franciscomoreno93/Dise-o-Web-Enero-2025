@@ -1,0 +1,19 @@
+@keyframes parpadeo {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.texto-parpadeante {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    animation: parpadeo 1s infinite;
+}
