@@ -105,3 +105,31 @@ body{
     text-overflow: ellipsis;
     margin: 20px 0px;
 }
+
+.blog-text a {
+    color: #0f0f0f;
+}
+
+.blog-text a:hover {
+    color: #e72929;
+    transition: all ease 0.3s;
+}
+
+@media(max-width:1250px){
+    .blog-box{
+        width: 300px;
+    }
+}
+
+@media(max-width:1100px){
+    .blog-box{
+        width: 70%;
+    }
+}
+
+@media(max-width:550px){
+    .blog-box{
+        margin: 20px 10px;
+        width: 100%;
+    }
+}
