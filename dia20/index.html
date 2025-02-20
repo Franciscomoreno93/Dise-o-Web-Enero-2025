@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 <body>
-    
+    <div class="container">
+        <h2>Contacto</h2>
+        <form method="POST" action="procesar_formulario.php">
+            <label for="nombre">Nombre *</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email"> E-mail *</label>
+            <input type="email" id="email" name="email" required placeholder="ej: myname@example.com">
+            <label for="telefono">Teléfono *</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            <label for="mensaje">Mensaje *</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            <input type="submit" value="Enviar">
+        </form>
 </body>
 </html>

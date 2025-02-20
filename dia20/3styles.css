@@ -5,7 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(surf.webp) no-repeat center center fixed;
+    background: url(pexels-pixabay-417173.jpg) no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -42,7 +42,7 @@ input{
 
 button{
     padding: 10px 20px;
-    background-color: #00ffaa;
+    background-color: skyblue;
     color: #000;
     border: none;
     border-radius: 10px;
