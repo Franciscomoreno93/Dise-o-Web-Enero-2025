@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="2styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Registro de Usuario</h2>
+        <form method="POST" action="procesar_registro.php">
+            <label for="nombre">Nombre :</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="usuario">Nombre de usuario :</label>
+            <input type="text" id="usuario" name="usuario" required>
+
+            <label for="email">Correo Electrónico :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="repetir_email">Repetir email :</label>
+            <input type="email" id="repetir_email" name="repetir_email" required>
+
+            <label for="fecha_nacimiento">Fecha de nacimiento :</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>
