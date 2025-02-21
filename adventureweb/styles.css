@@ -178,8 +178,55 @@ p{
     color: rgb(221, 221, 221);
 }
 
+.explore-content .line{
+    margin-bottom: 50px;
+
+}
+
 .explore-content .ctn{
     margin-top: 40px;
+}
+
+.content-col{
+    width: 40%;
+}
+
+.image-col {
+    width: 60%;
+}
+
+.tours .image-gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.image-gallery img{
+    width: 100px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content-col h1{
+    font-size: 7vmin;
+    color: #484872;
+}
+
+.content-col .line{
+    margin-left: -1px;
+}
+
+.content-col p{
+    padding: 0;
+    margin: 30px auto;
+}
+
+.content-col .ctn{
+    margin-left: -100px;
 }
 
 @media only screen and (max-width:850px){
