@@ -1,0 +1,13 @@
+body{
+    border-style: 0;
+    margin: 0;
+    font-family: "Nova Square", serif;
+    background-color: #f4f4f4;
+    background-image: url(blue-4145659_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
