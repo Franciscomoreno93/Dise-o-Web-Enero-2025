@@ -1,5 +1,8 @@
 :root {
     --blue: #190482;
+    --blue2: #7752fe;
+    --blue3: #8e8ffa;
+    --blue4:#c2d9ff;
 }
 
 * {
@@ -21,12 +24,16 @@ html {
     overflow-x: hidden;
 }
 
+section{
+    padding: 2.3rem 9%;
+}
+
 header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background: #fff;
+    background: transparent;
     padding: 2rem 9%;
     display: flex;
     align-items: center;
@@ -48,7 +55,7 @@ header .logo span{
 header .navbar a{
     font-size: 2rem;
     padding: 0 1.5rem;
-    color: #666;
+    color: var(--blue4);
 }
 
 header .navbar a:hover{
@@ -57,10 +64,92 @@ header .navbar a:hover{
 
 header .icons a{
     font-size: 2.5rem;
-    color: #333;
+    color: var(--blue);
     margin-left: 1.5rem;
 }
 
 header .icons a:hover{
-    
+    color: var(--blue);
 }
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: var(--blue4);
+    border-radius: 5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: 1rem solid rgba(0, 0, 0, .3);
+    display: none;
+
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(042123_MM_Huskicks_Sneakers_Club_004.webp) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 5rem;
+    color: var(--blue2);
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color: var(--blue);
+}
+
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px){
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 0100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: 1rem solid rgba(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: 1rem solid rgba(0, 0, 0, .1);
+        display: block;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
+
+
