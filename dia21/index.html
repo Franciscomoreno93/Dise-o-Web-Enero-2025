@@ -1,60 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nova+Square&display=swap" rel="stylesheet">
+    <title>NoticiasDiarias - Portal de Noticias</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="supremelogo.svg">
-    <title>Noticias</title>
 </head>
-
 <body>
-    <header class="sticky-header">
-        <h1>News</h1>
-        <input type="text" placeholder="Buscar..." class="search-bar">
+    <header>
+        <div class="logo">
+            <h1>NoticiasDiarias</h1>
+        </div>
+        <div class="buscador">
+            <form>
+                <input type="text" placeholder="Buscar noticias...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="categories.html">Categorías</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li><a href="register.html">Registrarse</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        <aside class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="#">Categoria 1</a></li>
-                    <li><a href="#">Categoria 2</a></li>
-                    <li><a href="#">Categoria 3</a></li>
-                </ul>
-            </nav>
-        </aside>
+    <main>
+        <section class="noticias-destacadas">
+            <h2>Noticias Destacadas</h2>
+            
+            <div class="noticia">
+                <img src="/api/placeholder/500/300" alt="Imagen de noticia tecnológica">
+                <div class="noticia-contenido">
+                    <h3><a href="noticia.html">La innovación en inteligencia artificial transforma la industria tecnológica</a></h3>
+                    <p class="fecha">24 de febrero, 2025</p>
+                    <p class="extracto">Los recientes avances en IA están cambiando la forma en que interactuamos con la tecnología. Empresas de todo el mundo están implementando soluciones basadas en inteligencia artificial...</p>
+                    <a href="noticia.html" class="leer-mas">Leer más</a>
+                </div>
+            </div>
+            
+            <div class="noticia">
+                <img src="/api/placeholder/500/300" alt="Imagen de noticia deportiva">
+                <div class="noticia-contenido">
+                    <h3><a href="noticia.html">España gana el campeonato mundial de fútbol con una espectacular remontada</a></h3>
+                    <p class="fecha">23 de febrero, 2025</p>
+                    <p class="extracto">La selección española de fútbol consiguió ayer una histórica victoria en la final del Mundial, tras remontar un 0-2 en contra. El partido se decidió en los últimos minutos...</p>
+                    <a href="noticia.html" class="leer-mas">Leer más</a>
+                </div>
+            </div>
+            
+            <div class="noticia">
+                <img src="/api/placeholder/500/300" alt="Imagen de noticia cultural">
+                <div class="noticia-contenido">
+                    <h3><a href="noticia.html">Nueva exposición de arte contemporáneo bate récords de asistencia</a></h3>
+                    <p class="fecha">22 de febrero, 2025</p>
+                    <p class="extracto">La exposición "Visiones del Futuro", inaugurada el pasado fin de semana en el Museo Nacional, ha superado todas las expectativas de asistencia. Las instalaciones interactivas...</p>
+                    <a href="noticia.html" class="leer-mas">Leer más</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        <main class="news-grid">
-            <article class="new-item">
-                <h2>Noticia 1</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur assumenda optio libero inventore
-                    est voluptate nisi minima fuga culpa esse!</p>
-                <a href="noticia.html">Leer más</a>
-            </article>
-            <article class="new-item">
-                <h2>Noticia 2</h2>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A provident cupiditate, error facilis ad
-                    totam doloremque tenetur esse sapiente qui.</p>
-                <a href="noticia.html">Leer más</a>
-            </article>
-            <artilce class="new-item">
-                <h2>Noticia 2</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa dolor nulla debitis nostrum adipisci
-                    perspiciatis qui laborum neque corrupti veniam.</p>
-                <a href="noticia.html">Leer más</a>
-            </artilce>
-        </main>
-    </div>
-    <footer class="footer">
-        <p>
-        <p>123 Cádiz 11011, Andalucía. Phone: 666-666-666. Email: holamundo@msn.com</p>
-        <p>© Francisco Moreno Fossati — All rights Reserved</p>
+    <footer>
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h3>NoticiasDiarias</h3>
+                <p>Tu portal de noticias de confianza desde 2025.</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Enlaces rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="categories.html">Categorías</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-columna">
+                <h3>Síguenos</h3>
+                <div class="redes-sociales">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 NoticiasDiarias. Todos los derechos reservados.</p>
+        </div>
     </footer>
 </body>
-
 </html>
