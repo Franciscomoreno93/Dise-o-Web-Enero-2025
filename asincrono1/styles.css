@@ -1,34 +1,28 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f5f0;
+    background-color: white;
     text-align: center;
 }
-
-/* Header */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #fff;
-    border-bottom: 2px solid #ddd;
+    padding: 7px 32px;
+    background-color: transparent;
+    border-bottom: 2px solid white;
 }
 
-/* Logo */
 .header__logo img {
     height: 20px;
     width: auto;
 }
 
-/* Menú */
 .header__nav {
     flex-grow: 1;
     display: flex;
@@ -48,7 +42,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Icono menú hamburguesa */
 .header__menu-icon {
     font-size: 2rem;
     cursor: pointer;
@@ -56,57 +49,78 @@ body {
     align-items: center;
 }
 
-/* Grid principal */
-.gallery {
+.grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr); 
-    gap: 10px;
-    width: 500px; 
-    height: 500px;
+    width: calc(100vw - 20px); 
+    height: auto;
+    margin: 10px;
+    gap: 5px; 
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-auto-flow: dense;
+    flex-grow: 1; 
 }
 
-/* Elementos de la galería */
-.gallery__item {
-    background-color: #ddd;
+.grid__item {
     display: flex;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
-    border-radius: 8px;
+    justify-content: center;
+    padding: 0;
 }
 
-/* Imágenes dentro de la galería */
-.gallery__image {
+.grid__item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
 }
 
-/* Responsive: Ajusta el cuadrado en pantallas pequeñas */
-@media (max-width: 600px) {
-    .gallery {
-        width: 100%;
-        height: auto;
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-/* Footer */
+.grid__item--large { grid-column: span 2; grid-row: span 2; } 
+.grid__item--wide { grid-column: span 2; } 
+.grid__item--tall { grid-row: span 2; } 
+
 .footer {
-    margin-top: 20px;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px; 
     background-color: #fff;
-    border-top: 2px solid #ddd;
+    padding: 20px;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo {
+    max-width: 100px; 
+    height: auto;
+    margin-bottom: 10px; 
 }
 
 .footer__text {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 9px;
+    color: #333;
 }
 
-.footer__info {
-    font-size: 0.9rem;
-    color: #777;
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid__item--large,
+    .grid__item--wide,
+    .grid__item--tall {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
 }
 
