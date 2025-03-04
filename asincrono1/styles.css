@@ -1,116 +1,137 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo general de la página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* fuente principal */
     background-color: white;
-    text-align: center;
+    text-align: center; /* alinea el texto */
 }
+
+/* Header / encabezado */
 .header {
-    display: flex;
+    display: flex; /* organización en flexbox */
     justify-content: space-between;
-    align-items: center;
+    align-items: center; /* alinea los elementos */
     padding: 7px 32px;
-    background-color: transparent;
+    background-color: transparent; /* fondo transparente */
     border-bottom: 2px solid white;
 }
 
+/* Logo del header */
 .header__logo img {
-    height: 20px;
-    width: auto;
+    height: 20px; /* altiura fija */
+    width: auto; /* mejora la proporción de la imagen */
 }
 
+/* Navegación del encabezado */
 .header__nav {
     flex-grow: 1;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* centra el contenido */
 }
 
+/* Menú de navegación */
 .header__menu {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 2rem; /* espacio entre los elementos */
 }
 
+/* Enlaces del menù */
 .header__link {
-    text-decoration: none;
+    text-decoration: none; /* elima el subrayado */
     color: #333;
     font-weight: 300;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Icono menú */
 .header__menu-icon {
     font-size: 2rem;
-    cursor: pointer;
+    cursor: pointer; /* cambio del cursor */
     display: flex;
     align-items: center;
 }
 
+/* Distribución en grid */
 .grid {
-    display: grid;
-    width: calc(100vw - 20px); 
+    display: grid; /* distribuye los elementos en grid */
+    width: calc(100vw - 20px); /* Resta 20 al ancho */
     height: auto;
     margin: 10px;
-    gap: 5px; 
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    gap: 5px; /* Especio entre los items de la cuadrícula */
+    grid-template-columns: repeat(6, 1fr); /* 6 columnas */
+    grid-template-rows: repeat(5, 1fr); /* 5 filas */
     grid-auto-flow: dense;
     flex-grow: 1; 
 }
 
+/* Items del grid */
 .grid__item {
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: center;
     padding: 0;
 }
 
+/* Imágenes */
 .grid__item img {
-    width: 100%;
+    width: 100%; /* ocupa todo el contenedor */
     height: 100%;
     object-fit: cover;
 }
 
-.grid__item--large { grid-column: span 2; grid-row: span 2; } 
-.grid__item--wide { grid-column: span 2; } 
-.grid__item--tall { grid-row: span 2; } 
+/* Item alto, largo y ancho */
+.grid__item--large { grid-column: span 2; grid-row: span 2; } /* ocupa 2 columnas y 2 filas */
+.grid__item--wide { grid-column: span 2; } /* ocupa 2 columnas */
+.grid__item--tall { grid-row: span 2; } /* ocupa 2 filas */
 
+/* Footer / pie de página */
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 200px; 
+    height: 200px; /* altura del footer */
     background-color: #fff;
     padding: 20px;
 }
 
+/* Contenedor del footer */
 .footer__container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Logo del footer */
 .footer__logo {
-    max-width: 100px; 
+    max-width: 100px; /* tamaño máximo */
     height: auto;
-    margin-bottom: 10px; 
+    margin-bottom: 10px; /* espacio */
 }
 
+/* Texto del footer */
 .footer__text {
     font-size: 9px;
     color: #333;
 }
 
+/* Media queries responsive */
+
+/* Responsive para pantallas medianas */
 @media (max-width: 1024px) {
     .grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
     }
 }
 
+/* Responsive para pantallas pequeñas */
 @media (max-width: 600px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
