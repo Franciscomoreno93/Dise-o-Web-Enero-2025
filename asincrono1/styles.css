@@ -127,7 +127,7 @@ body {
 /* Responsive para pantallas medianas */
 @media (max-width: 1024px) {
     .grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        grid-template-columns: repeat(3, 1fr); /* reducción a 3 columnas */
     }
 }
 
