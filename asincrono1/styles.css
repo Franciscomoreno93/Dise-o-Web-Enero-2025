@@ -134,9 +134,9 @@ body {
 /* Responsive para pantallas pequeñas */
 @media (max-width: 600px) {
     .grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
     }
-
+    /* Reasjuste de items */
     .grid__item--large,
     .grid__item--wide,
     .grid__item--tall {
