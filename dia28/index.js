@@ -27,3 +27,18 @@ const ul = document.getElementById('list');
 const li = document.createElement('li)');
 li.innerHTML = `${alumno.nombre} ${alumno.apellido} (${alumno.curso})`;
 ul.appendChild(li);
+
+// Ejercicio 5
+console.log(" ---- Ejer 5 ----")
+const alumnos = [
+    {nombre: "Gustavo", apellido: "Mesa", curso: "web"},
+    {nombre: "Lidia", apellido: "Rubio", curso: "web"},
+    {nombre: "Hajar", apellido: "Edd", curso: "web"},
+    {nombre: "Jose", apellido: "Silva", curso: "web"},
+]
+const ul = document.getElementById('list');
+alumnos.forEach(alumno => {
+    const li = document.createElement('li');
+    li.innerHTML = `${alumno.nombre} ${alumno.apellido} (${alumno.curso})`;
+    ul.appendChild(li)
+})
