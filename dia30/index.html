@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button{
+            display: block;
+            margin: 20px;
+            width: 200px;
+            background-color: lightcoral;
+            border: 1px solid grey;
+            padding: 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover{
+            background-color: blue;
+        }
+        button:active{
+            background-color: blueviolet;
+        }
+        .container{
+            width: 100vw;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightblue;
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">Dia 30</h1>
+    <button onclick="handleOpen()">Open</button>
+    <button onclick="handleClose()">Close</button>
+    <button onclick="handleMove()">Move</button>
+    <button onclick="handleResize()">Resize</button>
+    <button onclick="handleLocation()">Location</button>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+    <button onclick="handleRandorizer()">Randorizer</button>
+</html>
