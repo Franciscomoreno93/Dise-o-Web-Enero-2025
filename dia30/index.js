@@ -40,33 +40,49 @@ function handleRandorizer(){
 }
 
 // Ejercicio 3
-const n1 = document.getElementById("n1");
-const n2 = document.getElementById("n2");
-const op = document.getElementById("op");
-const result = document.getElementById("result");
-
-function handleCalculator() {
-    const value1 = parseFloat(n1.value);
-    const value2 = parseFloat(n2.value);
-    let r;
-
-    switch (op.value) {
-        case "+":
-            r = value1 + value2;
-            break;
-        case "-":
-            r = value1 - value2;
-            break;
-        case "*":
-            r = value1 * value2;
-            break;
-        case "/":
-            r = value1 / value2;
-            break;
-        default:
-            r = "Error";
-            break;
+function handleCalcular() {
+    try {
+        // Obtener los valores de los inputs
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+        const operador = document.getElementById("operador").value;
+        
+        // Convertir a números después de verificar que no estén vacíos
+        if (num1 === "" || num2 === "") {
+            alert("Por favor, completa ambos campos numéricos");
+            return;
+        }
+        
+        const numero1 = parseFloat(num1);
+        const numero2 = parseFloat(num2);
+        
+        // Verificar que sean números válidos
+        if (isNaN(numero1) || isNaN(numero2)) {
+            alert("Por favor, ingresa números válidos");
+            return;
+        }
+        
+        let resultado;
+        
+        // Realizar operación
+        if (operador === "+") {
+            resultado = numero1 + numero2;
+        } else if (operador === "-") {
+            resultado = numero1 - numero2;
+        } else if (operador === "*") {
+            resultado = numero1 * numero2;
+        } else if (operador === "/") {
+            if (numero2 === 0) {
+                alert("No es posible dividir por cero");
+                return;
+            }
+            resultado = numero1 / numero2;
+        }
+        
+        // Mostrar resultado (con máximo 2 decimales si es necesario)
+        document.getElementById("resultado").textContent = resultado % 1 !== 0 ? resultado.toFixed(2) : resultado;
+    } catch (error) {
+        console.error("Error en la calculadora:", error);
+        alert("Ocurrió un error al calcular");
     }
-
-    result.innerHTML = r;
 }
