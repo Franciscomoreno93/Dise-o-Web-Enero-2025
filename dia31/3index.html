@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divs con Colores Aleatorios</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #333;
+            background-color: #f0f0f0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cambia Colores de Divs</h1>
+    
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+    <button onclick="changeColors()">Cambiar Colores</button>
+
+    <script>
+        
+        console.log("Script cargado correctamente");
+        
+        
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        
+        
+        function changeColors() {
+            
+            const boxes = document.querySelectorAll('.box');
+            
+            
+            boxes.forEach(box => {
+                box.style.backgroundColor = getRandomColor();
+            });
+        }
+        
+        
+        window.onload = function() {
+            changeColors();
+        };
+    </script>
+</body>
+</html>

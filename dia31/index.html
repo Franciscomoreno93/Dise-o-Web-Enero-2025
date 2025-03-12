@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #4caf50;
+            padding-bottom: 10px;
+        }
+
+        .evento {
+            background-color: white;
+            border-left: 4px solid #4caf50;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 0 5px 5px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4caf50;
+            margin-top: 0;
+        }
+
+        p {
+            color: #666;
+            margin-top: 0;
+        }
+
+        code {
+            background-color: #f1f1f1;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Eventos Javascript</h1>
+    <div class="evento">
+        <h2>1. click</h2>
+        <p>Se dispara cuando el usuario hace clic en un elemento. Es uno de los eventos más comunes y se utiliza para
+            detectar interacciones con botones, enlaces y otros elementos interactivos.</p>
+        <p><code>elemento.addEventListener('click', function() { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>2. dblclick</h2>
+        <p>Se activa cuando el usuario hace doble clic en un elemento. Útil para implementar acciones alternativas o
+            avanzadas.</p>
+        <p><code>elemento.addEventListener('dblclick', function() { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>3. mouseenter</h2>
+        <p>Se dispara cuando el puntero del ratón entra en un elemento. A diferencia de mouseover, no se dispara cuando
+            el puntero se mueve sobre elementos hijos.</p>
+        <p><code>elemento.addEventListener('mouseenter', function() { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>4. mouseleave</h2>
+        <p>Se activa cuando el puntero del ratón sale de un elemento. Es el complemento de mouseenter y es útil para
+            efectos hover.</p>
+        <p><code>elemento.addEventListener('mouseleave', function() { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>5. keydown</h2>
+        <p>Se dispara cuando el usuario presiona una tecla. Este evento se activa repetidamente mientras se mantiene
+            presionada la tecla.</p>
+        <p><code>document.addEventListener('keydown', function(event) { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>6. keyup</h2>
+        <p>Se dispara cuando el usuario suelta una tecla previamente presionada. Útil para detectar cuando ha finalizado
+            la entrada de teclado.</p>
+        <p><code>document.addEventListener('keyup', function(event) { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>7. submit</h2>
+        <p>Se activa cuando se envía un formulario. Es fundamental para validar datos antes de enviarlos al servidor o
+            para manejar envíos de formularios mediante AJAX.</p>
+        <p><code>formulario.addEventListener('submit', function(event) { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>8. load</h2>
+        <p>Se dispara cuando un recurso y sus dependencias han terminado de cargar. Comúnmente usado con el objeto
+            window para ejecutar código después de que la página esté completamente cargada.</p>
+        <p><code>window.addEventListener('load', function() { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>9. DOMContentLoaded</h2>
+        <p>Se activa cuando el documento HTML ha sido completamente cargado y analizado, sin esperar a que se carguen
+            hojas de estilo, imágenes y subframes. Más rápido que el evento load.</p>
+        <p><code>document.addEventListener('DOMContentLoaded', function() { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>10. resize</h2>
+        <p>Se dispara cuando se cambia el tamaño de la ventana del navegador. Útil para diseños responsive y para
+            ajustar elementos según el tamaño de la ventana.</p>
+        <p><code>window.addEventListener('resize', function() { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>11. scroll</h2>
+        <p>Se activa cuando el usuario desplaza el contenido de un elemento o la ventana. Se utiliza para efectos de
+            parallax, cargas infinitas o para mostrar/ocultar elementos según la posición de desplazamiento.</p>
+        <p><code>window.addEventListener('scroll', function() { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>12. change</h2>
+        <p>Se dispara cuando el valor de un elemento &lt;input&gt;, &lt;select&gt; o &lt;textarea&gt; cambia y pierde el
+            foco. Útil para validar o procesar entradas de usuario.</p>
+        <p><code>input.addEventListener('change', function() { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>13. input</h2>
+        <p>Similar a change, pero se dispara inmediatamente cuando el valor de un elemento cambia, sin esperar a que
+            pierda el foco. Ideal para validación en tiempo real.</p>
+        <p><code>input.addEventListener('input', function() { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>14. focus</h2>
+        <p>Se activa cuando un elemento recibe el foco, ya sea por clic del usuario o navegación con teclado (Tab). Útil
+            para mostrar sugerencias o cambiar estilos.</p>
+        <p><code>elemento.addEventListener('focus', function() { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>15. blur</h2>
+        <p>Se dispara cuando un elemento pierde el foco. Complementario al evento focus y útil para validaciones cuando
+            el usuario termina de interactuar con un campo.</p>
+        <p><code>elemento.addEventListener('blur', function() { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>16. contextmenu</h2>
+        <p>Se activa cuando el usuario hace clic derecho en un elemento para abrir el menú contextual. Puede usarse para
+            crear menús contextuales personalizados.</p>
+        <p><code>elemento.addEventListener('contextmenu', function(event) { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>17. touchstart</h2>
+        <p>Se dispara cuando un dedo toca la pantalla en dispositivos táctiles. Es parte de los eventos touch y es
+            fundamental para aplicaciones móviles.</p>
+        <p><code>elemento.addEventListener('touchstart', function(event) { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>18. touchend</h2>
+        <p>Se activa cuando un dedo se levanta de la pantalla en dispositivos táctiles. Complementario a touchstart y
+            usado para detectar gestos completos.</p>
+        <p><code>elemento.addEventListener('touchend', function(event) { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>19. dragstart</h2>
+        <p>Se dispara cuando el usuario comienza a arrastrar un elemento. Es parte del API de Drag and Drop y permite
+            implementar funcionalidad de arrastrar y soltar.</p>
+        <p><code>elemento.addEventListener('dragstart', function(event) { ... });</code></p>
+    </div>
+
+    <div class="evento">
+        <h2>20. drop</h2>
+        <p>Se activa cuando un elemento arrastrado se suelta en un objetivo válido. Complementa dragstart y otros
+            eventos de arrastre para completar operaciones de arrastrar y soltar.</p>
+        <p><code>elemento.addEventListener('drop', function(event) { ... });</code></p>
+    </div>
+</body>
+
+</html>

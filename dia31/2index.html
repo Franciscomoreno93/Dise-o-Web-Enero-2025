@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="2index.js" defer></script>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container{
+            text-align: center;
+        }
+        h1{
+            color: #333;
+        }
+        .buttons-container{
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .color-button{
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Botones de colores aleatorios</h1>
+        <div class="buttons-container">
+            <button class="color-button" id="button1">Botón 1</button>
+            <button class="color-button" id="button2">Botón 2</button>
+            <button class="color-button" id="button3">Botón 3</button>
+            <button class="color-button" id="button4">Botón 4</button>
+            <button class="color-button" id="button5">Botón 5</button>
+        </div>
+    </div>
+</body>
+</html>
