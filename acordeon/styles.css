@@ -1,0 +1,92 @@
+.acordeon {
+    width: 90%;
+    /* Establece el ancho */
+    max-width: 120em;
+    padding: 2em;
+    /* Agrega espacio interno */
+    margin: 0 auto;
+    background-color: #e6e6e6;
+    border-radius: 20px;
+    /* Bordes redondeados */
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1),
+        -8px -8px 15px rgba(255, 255, 255, 0.8);
+    /* Sombra en efecto neoformismo */
+}
+
+.acordeon .bloque {
+    margin: 0 0 1em;
+    /* Margen inferior entre bloques */
+    padding: 1em;
+    background-color: #e6e6e6;
+    /* Color de fondo */
+    border-radius: 12px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05),
+        -5px -5px 10px rgba(255, 255, 255, 0.7);
+    overflow: hidden;
+    /* Evita que el contenido sobresalga */
+    transition: all 0.3s ease;
+}
+
+.acordeon .h2 {
+    margin: 0 0 1em;
+    padding: 1em;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05),
+        inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    /* Indica interactividad */
+    font-weight: normal;
+    /* Peso del texto */
+    color: #333;
+    transition: all 0.3s ease;
+    /* Transición suave */
+}
+
+.acordeon .h2:hover {
+    background-color: #e8e8e8;
+    /* Cambio de color al pasar el cursor */
+}
+
+.acordeon .h2:active {
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1),
+        inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+}
+
+.acordeon .contenido {
+    height: 0;
+    /* Inicialmente oculto */
+    padding: 0;
+    overflow: hidden;
+    transition: all .5s ease;
+    /* Trransición de apertura */
+    color: #555;
+    margin-top: 0.5em;
+}
+
+.acordeon .bloque.activo .contenido {
+    height: auto;
+    padding: 1em;
+    margin-top: 1em;
+    /* Espaciado superior */
+}
+
+.acordeon .bloque.activo .h2 {
+    box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.1),
+        inset -3px -3px 6px rgba(255, 255, 255, 0.7);
+    background-color: #e8e8e8;
+    /* Cambio de color al estar activo */
+}
+
+body {
+    background-color: #e6e6e6;
+    font-family: Arial, sans-serif;
+    display: flex;
+    /* Flexbox */
+    justify-content: center;
+    align-items: center;
+    /* Centra verticalmente */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
