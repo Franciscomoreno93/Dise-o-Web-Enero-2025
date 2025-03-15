@@ -10,20 +10,22 @@
 </head>
 
 <body>
-    <div class="grid">
-        <img src="/ligthbox/images/nieve.jpg" alt="imagen 0" class="img">
+    <div class="grid"> <!-- Organiza las imágenes en cuadrícula -->
+        <img src="/ligthbox/images/nieve.jpg" alt="imagen 0" class="img"> <!-- Imágenes en miniatura -->
         <img src="/ligthbox/images/nievee.jpg" alt="imagen 1" class="img">
         <img src="/ligthbox/images/nieveee.jpg" alt="imagen 2" class="img">
     </div>
 
-    <div class="lightbox">
+    <div class="lightbox"> <!-- Lightbox para cuando se haga clic -->
         <button class="close">
             <svg class="svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-              </svg>
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+            </svg> <!-- Icono SVG de X de Bootstrap -->
         </button>
 
         <img class="grande" alt="Imagen grande">
+        <!-- Elemento para agrandar la imagen (se asignará src mediante javascript) -->
     </div>
 </body>
 
