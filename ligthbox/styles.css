@@ -2,7 +2,6 @@ body{
     -webkit-hyphens: auto; /* Activa separaciñon de palabras en navegadores */
     -ms-hyphens: auto;
     hyphens: auto;
-    font-smooth: always;
     -webkit-font-smoothing: antialiased; /* Mejora visualización de fuentes */
     -moz-osx-font-smoothing: grayscale;
     background-color: #e0e0e0;

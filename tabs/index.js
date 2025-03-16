@@ -1,18 +1,19 @@
-// Selecciona todfos los elementos con clase 'li'
-const li = document.querySelectorAll('.li');
-
+// Selecciona todos los elementos con clase 'li'
+const tabs = document.querySelectorAll('.li');
 // Selecciona todos los elementos con clase 'bloque'
-const bloque = document.querySelectorAll('.bloque');
+const blocks = document.querySelectorAll('.bloque');
 
-li.forEach( ( cadaLi , i )=>{
-    li[i].addEventListener('click',()=>{ // Añade un evento de clic a cada pestaña
-
-        li.forEach( ( cadaLi , i )=>{
-            li[i].classList.remove('activo');
-            bloque[i].classList.remove('activo');
-        })
-
-        li[i].classList.add('activo'); // Añade lcase 'activo' solo a la pestaña clickeada y su bloque 
-        bloque[i].classList.add('activo');
-    })
-})
+// Agrega un solo event listener al contenedor padre
+tabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => {
+    // Elimina la clase 'activo' de todos los elementos
+    tabs.forEach((t, i) => {
+      t.classList.remove('activo');
+      blocks[i].classList.remove('activo');
+    });
+    
+    // Añade la clase 'activo' solo al tab clickeado y su bloque correspondiente
+    tab.classList.add('activo');
+    blocks[index].classList.add('activo');
+  });
+});
