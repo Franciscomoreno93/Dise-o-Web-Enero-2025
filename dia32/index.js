@@ -25,3 +25,22 @@ function handleToggleAnimate3() {
 }
 
 bt3.addEventListener("click", handleToggleAnimate3)
+
+// Ejericcio 5
+const box5 = document.querySelector(".box5");
+
+// Funciones comunes
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function getColor() {
+    return `rgb(${getRndInteger(0,255)}, ${getRndInteger(0,255)}, ${getRndInteger(0,255)})`;
+}
+
+function hanldeBgChange5(e) {
+    e.target.style.backgroundColor = getColor();
+}
+
+box5.addEventListener("mouseenter", handleBgChange5)
+box5.addEventListener("mouseleave", handleBgChange5)
