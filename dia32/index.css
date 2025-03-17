@@ -51,6 +51,10 @@ button:active{
     font-weight: bold;
 }
 
+.box5{
+    cursor: pointer;
+}
+
 .animate1{
     animation-iteration-count: infinite;
     animation-direction: alternate;
