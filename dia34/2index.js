@@ -1,10 +1,8 @@
-// Constantes y variables
 const imgList = document.querySelectorAll(`.img`);
-const lightbox = document.querySelector(`.lightbox`); // Obtiene la referencia al elemento ligthbox
-const grande = document.querySelector(`.grande`); // Obtiene la referencia a la imagen ampliada
-const closeBtn = document.querySelector(`.close`); // Obtiene la referencia al botón de cierre
+const lightbox = document.querySelector(`.lightbox`); 
+const grande = document.querySelector(`.grande`); 
+const closeBtn = document.querySelector(`.close`); 
 
-// Funciones
 const closeBtnHandler = () => lightbox.classList.remove(`isActive`);
 const imgListHandler = (index) =>{
     lightbox.classList.add(`isActive`);
