@@ -9,41 +9,71 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
         
         body {
             background-color: #111;
             color: white;
-            overflow: hidden;
+            overflow-x: hidden;
         }
         
         .container {
             position: relative;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px;
         }
         
         .brand-container {
             position: relative;
             z-index: 10;
-            width: 80%;
+            width: 100%;
             max-width: 1200px;
-            text-align: center;
+            display: grid;
+            grid-template-rows: repeat(4, auto);
+            gap: 0; /* Eliminamos el espacio entre filas */
+        }
+        
+        .row {
+            display: flex;
+            width: 100%;
+            margin-bottom: 0; /* Eliminamos el margen inferior */
+        }
+        
+        .row-1 {
+            grid-row: 1;
+        }
+        
+        .row-2 {
+            grid-row: 2;
+        }
+        
+        .row-3 {
+            grid-row: 3;
+        }
+        
+        .row-4 {
+            grid-row: 4;
         }
         
         .brand-item {
+            position: relative;
             display: inline-block;
-            font-size: 3.5rem;
             font-weight: bold;
-            margin: 15px 25px;
             cursor: pointer;
             opacity: 0.5;
             transition: opacity 0.3s ease;
-            text-align: left;
+            margin-right: 30px; /* Reducimos el margen entre elementos */
+            flex: 1;
+            white-space: nowrap;
+        }
+        
+        .brand-item:last-child {
+            margin-right: 0;
         }
         
         .brand-item:hover {
@@ -51,17 +81,24 @@
         }
         
         .brand-name {
-            display: block;
+            display: inline-block;
+            font-size: 4rem;
+            font-weight: 500;
+            line-height: 1; /* Ajustamos la altura de línea para hacer más compacto */
         }
         
         .brand-description {
-            font-size: 0.8rem;
+            display: inline-block;
+            font-size: 1rem;
             font-style: italic;
             opacity: 0.7;
+            margin-left: 10px;
+            vertical-align: bottom;
+            transform: translateY(-15px);
         }
         
         .background-container {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
@@ -85,11 +122,82 @@
             opacity: 1;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
+        /* Estilos específicos para la segunda fila */
+        .row-2 {
+            justify-content: flex-start; /* Alinea los elementos al inicio de la fila */
+        }
+        
+        .row-2 .brand-item[data-brand="emotional"] {
+            margin-left: 0; /* Elimina margen izquierdo para el item emotional */
+            margin-right: auto; /* Empuja otros elementos hacia la derecha */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 1200px) {
+            .brand-name {
+                font-size: 3.5rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .row {
+                flex-direction: column;
+            }
+            
             .brand-item {
+                margin-right: 0;
+                margin-bottom: 10px; /* Reducimos el margen entre elementos */
+            }
+            
+            .brand-name {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .brand-name {
                 font-size: 2.5rem;
-                margin: 10px 15px;
+            }
+            
+            .brand-description {
+                font-size: 0.8rem;
+                transform: translateY(-10px);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .brand-name {
+                font-size: 2rem;
+            }
+            
+            .brand-description {
+                font-size: 0.7rem;
+                transform: translateY(-8px);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .brand-name {
+                font-size: 1.8rem;
+            }
+            
+            .brand-description {
+                transform: translateY(-7px);
+            }
+        }
+        
+        @media (max-width: 380px) {
+            .brand-name {
+                font-size: 1.5rem;
+            }
+            
+            .brand-description {
+                font-size: 0.6rem;
+                transform: translateY(-6px);
             }
         }
     </style>
@@ -97,54 +205,62 @@
 <body>
     <div class="container">
         <div class="brand-container">
-            <div class="brand-item" data-brand="zpump">
-                <span class="brand-name">ZPump Urban Fit</span>
-                <span class="brand-description">Reebok</span>
+            <div class="row row-1">
+                <div class="brand-item" data-brand="zpump">
+                    <span class="brand-name">ZPump Urban Fit</span>
+                    <span class="brand-description">Reebok</span>
+                </div>
+                
+                <div class="brand-item" data-brand="coach2o">
+                    <span class="brand-name">Coach2o</span>
+                    <span class="brand-description">Font Vella</span>
+                </div>
             </div>
             
-            <div class="brand-item" data-brand="coach2o">
-                <span class="brand-name">Coach2o</span>
-                <span class="brand-description">Font Vella</span>
+            <div class="row row-2">
+                <div class="brand-item" data-brand="emotional">
+                    <span class="brand-name">Emotional Pulse</span>
+                    <span class="brand-description">Seidur</span>
+                </div>
+
+                <div class="brand-item" data-brand="rcar">
+                    <span class="brand-name">RCar</span>
+                    <span class="brand-description">Revista Car</span>
+                </div>
             </div>
             
-            <div class="brand-item" data-brand="rcar">
-                <span class="brand-name">RCar</span>
-                <span class="brand-description">Revista Car</span>
+            <div class="row row-3">
+                <div class="brand-item" data-brand="alhambra">
+                    <span class="brand-name">Alhambra</span>
+                    <span class="brand-description">Cervezas Alhambra</span>
+                </div>
+                
+                <div class="brand-item" data-brand="actimel">
+                    <span class="brand-name">Actimel</span>
+                    <span class="brand-description">Danone</span>
+                </div>
+                
+                <div class="brand-item" data-brand="ffuuss">
+                    <span class="brand-name">ffuuss</span>
+                    <span class="brand-description">OTS Group</span>
+                </div>
             </div>
             
-            <div class="brand-item" data-brand="emotional">
-                <span class="brand-name">Emotional Pulse</span>
-                <span class="brand-description">Seidur</span>
-            </div>
-            
-            <div class="brand-item" data-brand="alhambra">
-                <span class="brand-name">Alhambra</span>
-                <span class="brand-description">Cervezas Alhambra</span>
-            </div>
-            
-            <div class="brand-item" data-brand="actimel">
-                <span class="brand-name">Actimel</span>
-                <span class="brand-description">Danone</span>
-            </div>
-            
-            <div class="brand-item" data-brand="ffuuss">
-                <span class="brand-name">ffuuss</span>
-                <span class="brand-description">OTS Group</span>
-            </div>
-            
-            <div class="brand-item" data-brand="delicious">
-                <span class="brand-name">Delicious</span>
-                <span class="brand-description">Dia</span>
-            </div>
-            
-            <div class="brand-item" data-brand="roca">
-                <span class="brand-name">Roca</span>
-                <span class="brand-description">Sanitarios</span>
-            </div>
-            
-            <div class="brand-item" data-brand="deepstate">
-                <span class="brand-name">Deep State</span>
-                <span class="brand-description">Fax</span>
+            <div class="row row-4">
+                <div class="brand-item" data-brand="delicious">
+                    <span class="brand-name">Delicious</span>
+                    <span class="brand-description">Dia</span>
+                </div>
+                
+                <div class="brand-item" data-brand="roca">
+                    <span class="brand-name">Roca</span>
+                    <span class="brand-description">Sanitarios</span>
+                </div>
+                
+                <div class="brand-item" data-brand="deepstate">
+                    <span class="brand-name">Deep State</span>
+                    <span class="brand-description">Fax</span>
+                </div>
             </div>
         </div>
         
@@ -172,7 +288,8 @@
                 const brandName = item.getAttribute('data-brand');
                 const backgroundElement = document.getElementById(`bg-${brandName}`);
                 
-                item.addEventListener('mouseenter', function() {
+                // Función para manejar hover en desktop
+                function handleHover() {
                     // Ocultar todos los fondos primero
                     document.querySelectorAll('.background-image').forEach(bg => {
                         bg.classList.remove('active-background');
@@ -180,6 +297,15 @@
                     
                     // Mostrar el fondo correspondiente
                     backgroundElement.classList.add('active-background');
+                }
+                
+                // Eventos para desktop
+                item.addEventListener('mouseenter', handleHover);
+                
+                // Eventos para dispositivos táctiles
+                item.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    handleHover();
                 });
             });
             
