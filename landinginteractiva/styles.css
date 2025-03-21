@@ -1,3 +1,4 @@
+/* Reset */
 *{
     margin: 0;
     padding: 0;
@@ -11,6 +12,7 @@ body{
     overflow: hidden;
 }
 
+/* Contenedor principal que centra el contenido */
 .container{
     position: relative;
     width: 100%;
@@ -21,6 +23,7 @@ body{
     padding: 20px;
 }
 
+/* Grid para organizar 4 filas */
 .brand-container{
     position: relative;
     z-index: 10;
@@ -51,6 +54,7 @@ body{
     justify-content: flex-start;
 }
 
+/* Especifico para la tercera fila */
 .row-3{
     grid-row: 3;
     justify-content: flex-start;
@@ -85,6 +89,7 @@ body{
     white-space: nowrap;
 }
 
+/* Elimina margen derecho del ultimo elemento de cada fila */
 .brand-item:last-child{
     margin-right: 0;
 }
@@ -100,6 +105,7 @@ body{
     line-height: 1;
 }
 
+/* Estilo para texto pequeño */
 .brand-description{
     display: inline-block;
     font-size: 1rem;
@@ -119,6 +125,7 @@ body{
     z-index: 1;
 }
 
+/* Estilo para imagenes de fondo (inicialmente invisible) */
 .background-image{
     position: absolute;
     top: 0;
@@ -131,10 +138,12 @@ body{
     transition: opacity 1s ease;
 }
 
+/* Clase para imagen de fondo activa */
 .active-background{
     opacity: 1;
 }
 
+/* Imágenes de fondo */
 #bg-zpump{
     background-image: url(/landinginteractiva/images/reebook.jpg);
 }
@@ -175,6 +184,7 @@ body{
     background-image: url(/landinginteractiva/images/deepstate.jpg);
 }
 
+/* Posicionamiento especial para marca Emotional segunda fila */
 .row-2 .brand-item[data-brand="emotional"] {
     margin-left: 50px;
     margin-right: 0;
@@ -188,12 +198,14 @@ body{
     margin-right: 0;
 }
 
+/* Responsive para pantallas grandes */
 @media (max-width: 1200px){
     .brand-name{
         font-size: 3.5rem;
     }
 }
 
+/* Responsive para pantallas medianas */
 @media (max-width: 992px){
     .brand-container{
         display: flex;
@@ -206,8 +218,8 @@ body{
         width: 100%;
     }
 
-    .row1, .row-2, .row-3, .row-4{
-        grid-row: auto;
+    .row-1, .row-2, .row-3, .row-4{
+        grid-row: auto; /* Ignora grid en pantallas mas pequeñas */
     }
 
     .brand-item, .row-1 .brand-item:first-child, .row-3 .brand-item, .row-4 .brand-item{
@@ -226,6 +238,7 @@ body{
     }
 }
 
+/* Tablets */
 @media (max-width: 768px){
     .container{
         padding: 15px;
@@ -254,7 +267,7 @@ body{
         transform: none;
     }
 }
-
+ /* Responsive para móviles */
 @media (max-width: 576px){
     .brand-name{
         font-size: 2rem;
