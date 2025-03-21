@@ -32,32 +32,52 @@
             position: relative;
             z-index: 10;
             width: 100%;
-            max-width: 1200px;
+            max-width: 900px;
             display: grid;
             grid-template-rows: repeat(4, auto);
-            gap: 0; /* Eliminamos el espacio entre filas */
+            gap: 0;
         }
         
         .row {
             display: flex;
             width: 100%;
-            margin-bottom: 0; /* Eliminamos el margen inferior */
+            margin-bottom: 0;
         }
         
         .row-1 {
             grid-row: 1;
+            justify-content: flex-start;
+        }
+        
+        .row-1 .brand-item:first-child {
+            margin-right: 50px;
         }
         
         .row-2 {
             grid-row: 2;
+            justify-content: flex-start;
         }
         
         .row-3 {
             grid-row: 3;
+            justify-content: flex-start;
+            display: flex;
+            align-items: center;
+        }
+        
+        .row-3 .brand-item {
+            margin-right: 30px;
+            flex: 0 0 auto;
+            width: auto;
+        }
+        
+        .row-3 .brand-item:last-child {
+            margin-right: 0;
         }
         
         .row-4 {
             grid-row: 4;
+            justify-content: flex-start;
         }
         
         .brand-item {
@@ -67,8 +87,8 @@
             cursor: pointer;
             opacity: 0.5;
             transition: opacity 0.3s ease;
-            margin-right: 30px; /* Reducimos el margen entre elementos */
-            flex: 1;
+            margin-right: 20px;
+            flex: 0 1 auto;
             white-space: nowrap;
         }
         
@@ -84,7 +104,7 @@
             display: inline-block;
             font-size: 4rem;
             font-weight: 500;
-            line-height: 1; /* Ajustamos la altura de línea para hacer más compacto */
+            line-height: 1;
         }
         
         .brand-description {
@@ -92,9 +112,9 @@
             font-size: 1rem;
             font-style: italic;
             opacity: 0.7;
-            margin-left: 10px;
-            vertical-align: bottom;
-            transform: translateY(-15px);
+            margin-left: 5px;
+            vertical-align: middle;
+            transform: none;
         }
         
         .background-container {
@@ -121,18 +141,20 @@
         .active-background {
             opacity: 1;
         }
-
-        /* Estilos específicos para la segunda fila */
-        .row-2 {
-            justify-content: flex-start; /* Alinea los elementos al inicio de la fila */
-        }
         
         .row-2 .brand-item[data-brand="emotional"] {
-            margin-left: 0; /* Elimina margen izquierdo para el item emotional */
-            margin-right: auto; /* Empuja otros elementos hacia la derecha */
+            margin-left: 50px;
+            margin-right: 0;
+        }
+        
+        .row-4 .brand-item {
+            margin-right: 50px;
+        }
+        
+        .row-4 .brand-item:last-child {
+            margin-right: 0;
         }
 
-        /* Responsive styles */
         @media (max-width: 1200px) {
             .brand-name {
                 font-size: 3.5rem;
@@ -140,13 +162,33 @@
         }
         
         @media (max-width: 992px) {
-            .row {
+            .brand-container {
+                display: flex;
                 flex-direction: column;
+                align-items: flex-start;
             }
             
-            .brand-item {
+            .row {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .row-1, .row-2, .row-3, .row-4 {
+                grid-row: auto;
+            }
+            
+            .brand-item,
+            .row-1 .brand-item:first-child,
+            .row-3 .brand-item,
+            .row-4 .brand-item {
                 margin-right: 0;
-                margin-bottom: 10px; /* Reducimos el margen entre elementos */
+                margin-bottom: 20px;
+                margin-left: 0;
+                width: 100%;
+            }
+            
+            .row-2 .brand-item[data-brand="emotional"] {
+                margin-left: 0;
             }
             
             .brand-name {
@@ -157,15 +199,29 @@
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
+                align-items: flex-start;
+                padding-top: 50px;
+            }
+            
+            .brand-container {
+                padding-left: 15px;
+            }
+            
+            .brand-item {
+                margin-bottom: 25px;
             }
             
             .brand-name {
                 font-size: 2.5rem;
+                display: block;
             }
             
             .brand-description {
                 font-size: 0.8rem;
-                transform: translateY(-10px);
+                display: block;
+                margin-left: 0;
+                margin-top: 5px;
+                transform: none;
             }
         }
         
@@ -218,14 +274,14 @@
             </div>
             
             <div class="row row-2">
-                <div class="brand-item" data-brand="emotional">
-                    <span class="brand-name">Emotional Pulse</span>
-                    <span class="brand-description">Seidur</span>
-                </div>
-
                 <div class="brand-item" data-brand="rcar">
                     <span class="brand-name">RCar</span>
                     <span class="brand-description">Revista Car</span>
+                </div>
+                
+                <div class="brand-item" data-brand="emotional">
+                    <span class="brand-name">Emotional Pulse</span>
+                    <span class="brand-description">Seidur</span>
                 </div>
             </div>
             
@@ -266,8 +322,8 @@
         
         <div class="background-container">
             <!-- Imágenes de fondo que aparecerán con el efecto hover -->
-            <div class="background-image" id="bg-zpump" style="background-image: url(slide_zpump_07.jpg);"></div>
-            <div class="background-image" id="bg-coach2o" style="background-image: url(slide_zpump_07.jpg);"></div>
+            <div class="background-image" id="bg-zpump" style="background-image: url('/reebook.jpg');"></div>
+            <div class="background-image" id="bg-coach2o" style="background-image: url('/coachfontvella.jpg');"></div>
             <div class="background-image" id="bg-rcar" style="background-image: url('/api/placeholder/1200/800');"></div>
             <div class="background-image" id="bg-emotional" style="background-image: url('/api/placeholder/1200/800');"></div>
             <div class="background-image" id="bg-alhambra" style="background-image: url('/api/placeholder/1200/800');"></div>
@@ -281,36 +337,86 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Obtener todas las marcas y el contenedor principal
             const brandItems = document.querySelectorAll('.brand-item');
+            const mainContainer = document.querySelector('.container');
+            const bgContainer = document.querySelector('.background-container');
+            const backgrounds = document.querySelectorAll('.background-image');
             
-            // Añadir eventos de hover a cada elemento de marca
+            // Función para ocultar todos los fondos (volver a negro)
+            function clearAllBackgrounds() {
+                backgrounds.forEach(bg => {
+                    bg.classList.remove('active-background');
+                });
+            }
+            
+            // Al cargar la página, asegurarse de que no haya fondos activos
+            clearAllBackgrounds();
+            
+            // Variable para controlar si el cursor está sobre una marca
+            let isOverBrand = false;
+            
+            // Manejar todas las marcas
             brandItems.forEach(item => {
                 const brandName = item.getAttribute('data-brand');
-                const backgroundElement = document.getElementById(`bg-${brandName}`);
+                const bg = document.getElementById(`bg-${brandName}`);
                 
-                // Función para manejar hover en desktop
-                function handleHover() {
-                    // Ocultar todos los fondos primero
-                    document.querySelectorAll('.background-image').forEach(bg => {
-                        bg.classList.remove('active-background');
-                    });
-                    
-                    // Mostrar el fondo correspondiente
-                    backgroundElement.classList.add('active-background');
-                }
+                // Cuando el mouse entra en una marca
+                item.addEventListener('mouseenter', function() {
+                    isOverBrand = true;
+                    clearAllBackgrounds();
+                    if (bg) {
+                        bg.classList.add('active-background');
+                    }
+                });
                 
-                // Eventos para desktop
-                item.addEventListener('mouseenter', handleHover);
+                // Cuando el mouse sale de una marca
+                item.addEventListener('mouseleave', function() {
+                    isOverBrand = false;
+                    clearAllBackgrounds();
+                });
                 
-                // Eventos para dispositivos táctiles
+                // Para dispositivos táctiles
                 item.addEventListener('touchstart', function(e) {
-                    e.preventDefault();
-                    handleHover();
+                    clearAllBackgrounds();
+                    if (bg) {
+                        bg.classList.add('active-background');
+                    }
                 });
             });
             
-            // Configurar un fondo predeterminado al cargar la página
-            document.getElementById('bg-alhambra').classList.add('active-background');
+            // Agregar un evento global para asegurar que el fondo se borre
+            document.body.addEventListener('mouseover', function(e) {
+                // Verificar si el mouse está sobre alguna marca
+                let onBrand = false;
+                for (let item of brandItems) {
+                    if (item.contains(e.target)) {
+                        onBrand = true;
+                        break;
+                    }
+                }
+                
+                // Si no está sobre ninguna marca, limpiar los fondos
+                if (!onBrand) {
+                    clearAllBackgrounds();
+                }
+            });
+            
+            // Evento especial para dispositivos táctiles
+            document.body.addEventListener('touchstart', function(e) {
+                // Si el toque no fue en una marca, limpiar fondos
+                let touchedBrand = false;
+                for (let item of brandItems) {
+                    if (item.contains(e.target)) {
+                        touchedBrand = true;
+                        break;
+                    }
+                }
+                
+                if (!touchedBrand) {
+                    clearAllBackgrounds();
+                }
+            });
         });
     </script>
 </body>
