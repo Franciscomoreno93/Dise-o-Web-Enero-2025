@@ -155,7 +155,6 @@
             margin-right: 0;
         }
 
-        /* Media Queries - Mejorando la responsividad */
         @media (max-width: 1200px) {
             .brand-name {
                 font-size: 3.5rem;
@@ -325,9 +324,9 @@
             <!-- Imágenes de fondo que aparecerán con el efecto hover -->
             <div class="background-image" id="bg-zpump" style="background-image: url('/reebook.jpg');"></div>
             <div class="background-image" id="bg-coach2o" style="background-image: url('/coachfontvella.jpg');"></div>
-            <div class="background-image" id="bg-rcar" style="background-image: url('/api/placeholder/1200/800');"></div>
-            <div class="background-image" id="bg-emotional" style="background-image: url('/api/placeholder/1200/800');"></div>
-            <div class="background-image" id="bg-alhambra" style="background-image: url('/api/placeholder/1200/800');"></div>
+            <div class="background-image" id="bg-rcar" style="background-image: url('/fordgt.jpg');"></div>
+            <div class="background-image" id="bg-emotional" style="background-image: url('/emotionalpulse.webp');"></div>
+            <div class="background-image" id="bg-alhambra" style="background-image: url('/Alhambra.jpg');"></div>
             <div class="background-image" id="bg-actimel" style="background-image: url('/api/placeholder/1200/800');"></div>
             <div class="background-image" id="bg-ffuuss" style="background-image: url('/api/placeholder/1200/800');"></div>
             <div class="background-image" id="bg-delicious" style="background-image: url('/api/placeholder/1200/800');"></div>
@@ -338,46 +337,86 @@
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Obtener todas las marcas y el contenedor principal
             const brandItems = document.querySelectorAll('.brand-item');
+            const mainContainer = document.querySelector('.container');
+            const bgContainer = document.querySelector('.background-container');
+            const backgrounds = document.querySelectorAll('.background-image');
             
-            // Función para manejar la interacción (hover o touch)
-            function handleInteraction(item) {
-                const brandName = item.getAttribute('data-brand');
-                const backgroundElement = document.getElementById(`bg-${brandName}`);
-                
-                // Ocultar todos los fondos primero
-                document.querySelectorAll('.background-image').forEach(bg => {
+            // Función para ocultar todos los fondos (volver a negro)
+            function clearAllBackgrounds() {
+                backgrounds.forEach(bg => {
                     bg.classList.remove('active-background');
                 });
-                
-                // Mostrar el fondo correspondiente
-                if (backgroundElement) {
-                    backgroundElement.classList.add('active-background');
-                }
             }
             
-            // Añadir eventos a cada elemento de marca
+            // Al cargar la página, asegurarse de que no haya fondos activos
+            clearAllBackgrounds();
+            
+            // Variable para controlar si el cursor está sobre una marca
+            let isOverBrand = false;
+            
+            // Manejar todas las marcas
             brandItems.forEach(item => {
-                // Eventos para desktop
+                const brandName = item.getAttribute('data-brand');
+                const bg = document.getElementById(`bg-${brandName}`);
+                
+                // Cuando el mouse entra en una marca
                 item.addEventListener('mouseenter', function() {
-                    handleInteraction(item);
+                    isOverBrand = true;
+                    clearAllBackgrounds();
+                    if (bg) {
+                        bg.classList.add('active-background');
+                    }
                 });
                 
-                // Eventos para dispositivos táctiles
+                // Cuando el mouse sale de una marca
+                item.addEventListener('mouseleave', function() {
+                    isOverBrand = false;
+                    clearAllBackgrounds();
+                });
+                
+                // Para dispositivos táctiles
                 item.addEventListener('touchstart', function(e) {
-                    // No prevenir default en todos los casos para permitir scroll
-                    // Solo prevenir en el elemento tocado
-                    if (e.target.closest('.brand-item') === item) {
-                        e.preventDefault();
-                        handleInteraction(item);
+                    clearAllBackgrounds();
+                    if (bg) {
+                        bg.classList.add('active-background');
                     }
                 });
             });
             
-            // Configurar un fondo predeterminado al cargar la página
-            document.getElementById('bg-alhambra').classList.add('active-background');
+            // Agregar un evento global para asegurar que el fondo se borre
+            document.body.addEventListener('mouseover', function(e) {
+                // Verificar si el mouse está sobre alguna marca
+                let onBrand = false;
+                for (let item of brandItems) {
+                    if (item.contains(e.target)) {
+                        onBrand = true;
+                        break;
+                    }
+                }
+                
+                // Si no está sobre ninguna marca, limpiar los fondos
+                if (!onBrand) {
+                    clearAllBackgrounds();
+                }
+            });
             
-            // No necesitamos la función handleOrientationChange ya que mantenemos el diseño original
+            // Evento especial para dispositivos táctiles
+            document.body.addEventListener('touchstart', function(e) {
+                // Si el toque no fue en una marca, limpiar fondos
+                let touchedBrand = false;
+                for (let item of brandItems) {
+                    if (item.contains(e.target)) {
+                        touchedBrand = true;
+                        break;
+                    }
+                }
+                
+                if (!touchedBrand) {
+                    clearAllBackgrounds();
+                }
+            });
         });
     </script>
 </body>

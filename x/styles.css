@@ -206,7 +206,7 @@ body{
         width: 100%;
     }
 
-    .row1, .row-2, .row-3, .row-4{
+    .row-1, .row-2, .row-3, .row-4{
         grid-row: auto;
     }
 
