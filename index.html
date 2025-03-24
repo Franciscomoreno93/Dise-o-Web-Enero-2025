@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrusel 3D</title>
+    <style>
+    /* Estilos generales */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+        overflow: hidden;
+    }
+
+    #container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Importante para efectos 3D */
+        perspective: 1200px;
+    }
+
+    /* Estilos del contenedor del carrusel */
+    #carrouselr-container {
+        position: relative;
+        width: 90%;
+        max-width: 800px;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Estilos del carrusel */
+    #carrouselr {
+        position: relative;
+        width: 200px; /* Ancho de un elemento */
+        height: 300px; /* Altura de un elemento */
+        transform-style: preserve-3d; /* Crucial para efecto 3D */
+        transition: transform 0.5s ease;
+    }
+
+    /* Estilos de cada elemento del carrusel */
+    .carrousel {
+        position: absolute;
+        width: 200px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        transition: all 0.3s ease;
+        backface-visibility: visible;
+        transform-origin: center center -150px; /* El punto de origen es crítico */
+    }
+
+    .carrousel:hover {
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+    }
+
+    .carrousel span {
+        font-size: 48px;
+        font-weight: bold;
+        color: #333;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="carrouselr-container">
+            <div id="carrouselr">
+                <div class="carrousel"><span>1</span></div>
+                <div class="carrousel"><span>2</span></div>
+                <div class="carrousel"><span>3</span></div>
+                <div class="carrousel"><span>4</span></div>
+                <div class="carrousel"><span>5</span></div>
+                <div class="carrousel"><span>6</span></div>
+                <div class="carrousel"><span>7</span></div>
+                <div class="carrousel"><span>8</span></div>
+                <div class="carrousel"><span>9</span></div>
+                <div class="carrousel"><span>10</span></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Obtener elementos del DOM
+        const carousel = document.getElementById('carrouselr');
+        const items = document.querySelectorAll('.carrousel');
+        
+        // Configuración del carrusel
+        const totalItems = items.length;
+        const radius = 300; // Radio del círculo 3D
+        let currentAngle = 0;
+        let autoRotateAnimation;
+        let isAutoRotating = true;
+        
+        // Inicializar posiciones 3D de los elementos
+        function initCarousel() {
+            const angleStep = (2 * Math.PI) / totalItems;
+            
+            // Posicionar cada elemento en un círculo 3D
+            items.forEach((item, index) => {
+                // Calcular ángulo para cada elemento
+                const angle = angleStep * index;
+                
+                // Aplicar transformación para posicionar en el círculo
+                item.style.transform = `rotateY(${angle}rad) translateZ(${radius}px)`;
+                
+                // Calcular posiciones para opacidad
+                const z = Math.cos(angle) * radius;
+                
+                // Ajustar opacidad para dar sensación de profundidad
+                const zNormalized = (z + radius) / (2 * radius);
+                item.style.opacity = 0.5 + (zNormalized * 0.5);
+            });
+        }
+        
+        // Función para rotar el carrusel
+        function rotateCarousel() {
+            currentAngle += 0.01; // Rotación suave
+            carousel.style.transform = `rotateY(${currentAngle}rad)`;
+            
+            if (isAutoRotating) {
+                autoRotateAnimation = requestAnimationFrame(rotateCarousel);
+            }
+        }
+        
+        // Iniciar rotación automática
+        function startAutoRotate() {
+            isAutoRotating = true;
+            rotateCarousel();
+        }
+        
+        // Detener rotación automática
+        function stopAutoRotate() {
+            isAutoRotating = false;
+            cancelAnimationFrame(autoRotateAnimation);
+        }
+        
+        // Inicializar carrusel
+        initCarousel();
+        
+        // Iniciar rotación automática
+        startAutoRotate();
+        
+        // Detener rotación al pasar el ratón
+        carousel.addEventListener('mouseenter', stopAutoRotate);
+        carousel.addEventListener('mouseleave', startAutoRotate);
+        
+        // Permitir hacer clic en elementos para centrarlos
+        items.forEach((item, index) => {
+            item.addEventListener('click', function() {
+                stopAutoRotate();
+                
+                // Calcular el ángulo para centrar este elemento
+                const targetAngle = (2 * Math.PI / totalItems) * index;
+                currentAngle = -targetAngle;
+                
+                // Aplicar la rotación con transición suave
+                carousel.style.transform = `rotateY(${currentAngle}rad)`;
+                
+                // Reanudar después de una pausa
+                setTimeout(startAutoRotate, 2000);
+            });
+        });
+    });
+    </script>
+</body>
+</html>
