@@ -1,0 +1,40 @@
+body{
+    background: #a29bfe;
+}
+
+#container{
+    margin: 10em auto;
+    height: 10em;
+    width: 10em;
+    position: relative;
+}
+
+#square1{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 100%;
+    background: #dfe6e9;
+    box-shadow: inset -10px -5px 0px 0px rgba(178, 190, 195, .3)
+}
+
+.eyeball{
+    width: 50%;
+    height: 50%;
+    background: #2d3436;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.parallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+    max-width: 100%;
+    position: relative;
+}

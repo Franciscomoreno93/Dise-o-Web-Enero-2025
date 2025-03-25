@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Parallax con Rellax.js</title>
+    <link rel="stylesheet" href="3styles.css"> 
+    <script defer src="3index.js"></script>
+</head>
+<body>
+    <section class="parallax-section">
+        <div class="parallax-bg bg-1" data-rellax-speed="-7"></div>
+        <div class="parallax-element element-1 rellax" data-rellax-speed="5"></div>
+        <div class="content">
+            <h1>Efecto Parallax</h1>
+            <p>Este es un ejemplo de efecto parallax creado con Rellax.js. Desplázate hacia abajo para ver más efectos.</p>
+        </div>
+    </section>
+    
+    <section class="info">
+        <h2>¿Qué es el efecto Parallax?</h2>
+        <p>El efecto parallax crea una ilusión de profundidad en sitios web 2D al hacer que los elementos se muevan a diferentes velocidades cuando el usuario se desplaza por la página.</p>
+    </section>
+    
+    <section class="parallax-section">
+        <div class="parallax-bg bg-2" data-rellax-speed="-5"></div>
+        <div class="parallax-element element-2 rellax" data-rellax-speed="3"></div>
+        <div class="content">
+            <h1>Personalización</h1>
+            <p>Puedes personalizar fácilmente las velocidades y los elementos que utilizan el efecto parallax modificando el atributo data-rellax-speed.</p>
+        </div>
+    </section>
+    
+    <section class="info">
+        <h2>Ventajas de Rellax.js</h2>
+        <p>Rellax.js es ligero (solo 1KB gzipped), no tiene dependencias externas y es muy fácil de implementar en cualquier proyecto web.</p>
+    </section>
+    
+    <section class="parallax-section">
+        <div class="parallax-bg bg-3" data-rellax-speed="-6"></div>
+        <div class="parallax-element element-3 rellax" data-rellax-speed="4"></div>
+        <div class="content">
+            <h1>Compatibilidad</h1>
+            <p>Este efecto funciona en todos los navegadores modernos y se puede adaptar fácilmente a dispositivos móviles y tabletas.</p>
+        </div>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+    <script>
+        var rellax = new Rellax('.rellax');
+    </script>
+</body>
+</html>
