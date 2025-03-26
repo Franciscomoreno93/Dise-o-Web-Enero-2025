@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Películas TMDB</title>
+    <link rel="stylesheet" href="3styles.css">
+    <script defer src="3index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Buscador de Películas</h1>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar películas...">
+            <button id="searchButton">Buscar</button>
+        </div>
+        
+        <div id="errorMessage" class="error-message"></div>
+        <div id="loading" class="loading-message">Cargando resultados...</div>
+        
+        <div id="resultsContainer" class="results-grid"></div>
+        
+        <div id="resultsCount" class="results-count"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
