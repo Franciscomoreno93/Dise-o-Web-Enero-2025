@@ -13,14 +13,9 @@ const elements = {
   resultsCount: document.getElementById('resultsCount')
 };
 
-/**
- * Inicializa los eventos de la aplicación
- */
 function initApp() {
-  // Evento para el botón de búsqueda
   elements.searchButton.addEventListener('click', performSearch);
   
-  // Evento para presionar Enter en el input de búsqueda
   elements.searchInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       performSearch();
@@ -58,8 +53,8 @@ async function performSearch() {
 
 /**
  * Consulta la API de TMDB para buscar películas
- * @param {string} query - Término de búsqueda
- * @returns {Promise<Array>} - Array con los resultados de películas
+ * @param {string} query 
+ * @returns {Promise<Array>} 
  */
 async function searchMovies(query) {
   const url = `${API_BASE_URL}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(query)}&language=${LANGUAGE}`;
@@ -76,8 +71,8 @@ async function searchMovies(query) {
 
 /**
  * Muestra las películas en el contenedor de resultados
- * @param {Array} movies - Array de películas 
- * @param {string} searchTerm - Término de búsqueda
+ * @param {Array} movies 
+ * @param {string} searchTerm 
  */
 function displayMovies(movies, searchTerm) {
   movies.forEach(movie => {
@@ -90,8 +85,8 @@ function displayMovies(movies, searchTerm) {
 
 /**
  * Crea el elemento HTML para una tarjeta de película
- * @param {Object} movie - Datos de la película
- * @returns {HTMLElement} - Elemento HTML de la tarjeta
+ * @param {Object} movie 
+ * @returns {HTMLElement} 
  */
 function createMovieCard(movie) {
   const card = document.createElement('div');
