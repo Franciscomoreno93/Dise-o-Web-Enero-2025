@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ejercicio 1</h1>
+        <button id="btn1">Ejercicio 1</button>
+        <h1>Ejercicio 2</h1>
+        <button id="btn2Start">Empezar</button>
+        <button id="btn2End">Terminar</button>
+        <h1>Ejercicio 3</h1>
+        <input id="input3" placeholder="Tu nombre">
+        <button id="btn3">Guardar</button>
+    </div>
+    <script>
+        // Ejercicio 1
+        let btn1 = document.getElementById("btn1");
+
+        function ejer1() {
+            setTimeout(() => alert("He esperado un ratico"), 2000)
+        }
+        btn1.addEventListener("click", ejer1)
+
+        // Ejercicio 2
+        let btn2Start = document.getElementById("btn2Start");
+        let btn2End = document.getElementById("btn2End");
+        let auto;
+
+        function ejer2Start(){
+            auto = setInterval(() => alert("He esperado un ratico"), 5000)
+        }
+
+        function ejer2Stop() {
+            cealrInterval(auto);
+        }
+
+        btn2Start.addEventListener("click", ejer2Start);
+        btn2End.addEventListener("click", ejer2Stop);
+        
+        // Ejercicio 3
+        let input3 = document.getElementById("input3");
+        let btn3 = document.getElementById("btn3");
+        let name3 = localStorage.getItem("name");
+        
+        function ejer3() {
+            localStorage.setItem("name", input3.value)
+        }
+
+        btn3.addEventListener("click", ejer3);
+
+        if(name3){
+            alert(name3);
+            input3.value = name3;
+        }
+    </script> 
+</body>
+</html>
