@@ -1,4 +1,25 @@
-/* Reset y estilos generales */
+/* 
+ * SkateWorld - Estilos Globales
+ * Archivo CSS unificado para todo el sitio
+ */
+
+/* 
+ * Tabla de contenidos:
+ * 1. Reset y estilos generales
+ * 2. Header y navegación
+ * 3. Secciones comunes (hero, página header, etc.)
+ * 4. Página de inicio
+ * 5. Página de artículos
+ * 6. Página de categorías
+ * 7. Página acerca de
+ * 8. Página de contacto
+ * 9. Componentes compartidos (tarjetas, botones, etc.)
+ * 10. Footer
+ * 11. Utilidades
+ * 12. Responsive
+ */
+
+/* ===== 1. Reset y estilos generales ===== */
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +47,7 @@ img {
     height: auto;
 }
 
-/* Header Sticky */
+/* ===== 2. Header y navegación ===== */
 header {
     background-color: #1a1a1a;
     color: #fff;
@@ -54,7 +75,6 @@ header {
     color: #ff3e3e;
 }
 
-/* Navegación */
 .main-nav ul {
     display: flex;
 }
@@ -71,7 +91,8 @@ header {
     transition: color 0.3s;
 }
 
-.main-nav a:hover, .main-nav a.active {
+.main-nav a:hover, 
+.main-nav a.active {
     color: #ff3e3e;
 }
 
@@ -84,18 +105,80 @@ header {
     transition: width 0.3s;
 }
 
-.main-nav a:hover::after, .main-nav a.active::after {
+.main-nav a:hover::after, 
+.main-nav a.active::after {
     width: 100%;
 }
 
-/* Menú hamburguesa */
 .menu-toggle {
     display: none;
     cursor: pointer;
     font-size: 1.5rem;
 }
 
-/* Hero section con slider */
+/* ===== 3. Secciones comunes ===== */
+.page-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.page-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.page-description {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 3px;
+    background-color: #ff3e3e;
+    margin: 10px auto 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff3e3e;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e02020;
+}
+
+/* ===== 4. Página de inicio - Hero y Slider ===== */
 .hero {
     position: relative;
     height: 80vh;
@@ -146,22 +229,6 @@ header {
     margin-bottom: 30px;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #ff3e3e;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #e02020;
-}
-
 .slider-nav {
     position: absolute;
     bottom: 30px;
@@ -184,168 +251,12 @@ header {
     background-color: #ff3e3e;
 }
 
-/* Page Header */
-.page-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/400');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-.page-title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.page-description {
-    max-width: 600px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-}
-
-/* About Hero Section with background image */
-.about-hero {
-    background-image: url('/api/placeholder/1400/800');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 500px;
-    position: relative;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.about-hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 0;
-}
-
-.about-hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    padding: 0 20px;
-}
-
-.about-hero-title {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.about-hero-subtitle {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-    font-weight: 400;
-}
-
-/* Section Titles */
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.section-title h2 {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    display: inline-block;
-}
-
-.section-title h2::after {
-    content: '';
-    display: block;
-    width: 70%;
-    height: 3px;
-    background-color: #ff3e3e;
-    margin: 10px auto 0;
-}
-
-/* Featured content */
+/* Artículos destacados en inicio */
 .featured {
     padding: 80px 5%;
 }
 
-.featured-grid, .articles-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card, .article-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover, .article-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-}
-
-.card-img, .article-img {
-    height: 200px;
-    overflow: hidden;
-}
-
-.card-img img, .article-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s;
-}
-
-.card:hover .card-img img, .article-card:hover .article-img img {
-    transform: scale(1.1);
-}
-
-.card-content, .article-content {
-    padding: 20px;
-}
-
-.card-title, .article-title {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-}
-
-.card-category, .article-category {
-    display: inline-block;
-    background-color: #f0f0f0;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    color: #555;
-}
-
-.card-text, .article-excerpt {
-    margin-bottom: 20px;
-    color: #666;
-}
-
-.card-link, .article-link {
-    font-weight: 600;
-    color: #ff3e3e;
-}
-
-/* Article specific styles */
+/* ===== 5. Página de artículos ===== */
 .articles-section {
     padding: 80px 5%;
 }
@@ -373,7 +284,8 @@ header {
     transition: all 0.3s;
 }
 
-.filter-tab:hover, .filter-tab.active {
+.filter-tab:hover, 
+.filter-tab.active {
     background-color: #ff3e3e;
     color: white;
 }
@@ -405,14 +317,6 @@ header {
     cursor: pointer;
 }
 
-.article-meta {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    font-size: 0.9rem;
-    color: #888;
-}
-
 .pagination {
     display: flex;
     justify-content: center;
@@ -432,7 +336,8 @@ header {
     transition: all 0.3s;
 }
 
-.page-number:hover, .page-number.active {
+.page-number:hover, 
+.page-number.active {
     background-color: #ff3e3e;
     color: white;
 }
@@ -456,7 +361,34 @@ header {
     color: white;
 }
 
-/* Categories Section */
+/* Estilos para el mensaje de búsqueda sin resultados */
+.no-results-message {
+    text-align: center;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    margin: 20px 0;
+    color: #666;
+}
+
+.no-results-message p {
+    margin-bottom: 10px;
+}
+
+.no-results-message strong {
+    color: #ff3e3e;
+}
+
+/* Estilo para resaltar términos de búsqueda */
+.highlight {
+    background-color: #ffeb3b;
+    color: #000;
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+/* ===== 6. Página de categorías ===== */
 .categories-section {
     padding: 80px 5%;
 }
@@ -537,7 +469,7 @@ header {
     transform: translateX(5px);
 }
 
-/* Features Section */
+/* Features Sección */
 .features-section {
     padding: 80px 5%;
     background-color: #1a1a1a;
@@ -578,7 +510,51 @@ header {
     font-size: 0.95rem;
 }
 
-/* About Section */
+/* ===== 7. Página acerca de ===== */
+.about-hero {
+    background-image: url('../img/about-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 500px;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.about-hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.about-hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
 .about-section {
     padding: 80px 5%;
 }
@@ -631,7 +607,7 @@ header {
     object-fit: cover;
 }
 
-/* Timeline Section */
+/* Timeline */
 .timeline-section {
     padding: 80px 5%;
     background-color: #f1f1f1;
@@ -793,7 +769,28 @@ header {
     color: white;
 }
 
-/* Contact Section */
+/* Contact CTA */
+.contact-cta {
+    padding: 80px 5%;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.cta-text {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+/* ===== 8. Página de contacto ===== */
 .contact-section {
     padding: 80px 5%;
 }
@@ -917,6 +914,11 @@ header {
     border-color: #ff3e3e;
 }
 
+.form-control.error {
+    border-color: #ff3e3e;
+    background-color: rgba(255, 62, 62, 0.05);
+}
+
 textarea.form-control {
     min-height: 150px;
     resize: vertical;
@@ -946,19 +948,58 @@ textarea.form-control {
     position: relative;
 }
 
-.map-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+#map-container {
     height: 100%;
-    background-color: #eee;
+    width: 100%;
+    position: relative;
 }
 
-.map-container img {
-    width: 100%;
+#map {
     height: 100%;
-    object-fit: cover;
+    width: 100%;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    z-index: 1;
+}
+
+.map-overlay h3 {
+    margin-top: 0;
+    color: #ff3e3e;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.map-overlay p {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #ff3e3e;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.map-button:hover {
+    background-color: #e02020;
 }
 
 /* FAQ Section */
@@ -1014,25 +1055,89 @@ textarea.form-control {
     padding: 0 20px 20px;
 }
 
-/* Contact CTA */
-.contact-cta {
-    padding: 80px 5%;
-    background-color: #1a1a1a;
-    color: white;
-    text-align: center;
+/* ===== 9. Componentes compartidos ===== */
+/* Cards */
+.featured-grid, 
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
 }
 
-.cta-title {
-    font-size: 2.5rem;
+.card, 
+.article-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover, 
+.article-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-img, 
+.article-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img img, 
+.article-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card:hover .card-img img, 
+.article-card:hover .article-img img {
+    transform: scale(1.1);
+}
+
+.card-content, 
+.article-content {
+    padding: 20px;
+}
+
+.card-title, 
+.article-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.card-category, 
+.article-category {
+    display: inline-block;
+    background-color: #f0f0f0;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.card-text, 
+.article-excerpt {
     margin-bottom: 20px;
-    text-transform: uppercase;
+    color: #666;
 }
 
-.cta-text {
-    max-width: 600px;
-    margin: 0 auto 30px;
-    font-size: 1.1rem;
-    color: #ccc;
+.card-link, 
+.article-link {
+    font-weight: 600;
+    color: #ff3e3e;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #888;
 }
 
 /* Newsletter */
@@ -1084,7 +1189,7 @@ textarea.form-control {
     background-color: #e02020;
 }
 
-/* Footer */
+/* ===== 10. Footer ===== */
 footer {
     background-color: #1a1a1a;
     color: #fff;
@@ -1161,9 +1266,54 @@ footer {
     color: #888;
 }
 
-/* Responsive */
+/* ===== 11. Utilidades ===== */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #ff3e3e;
+    color: white;
+    padding: 8px;
+    z-index: 1001;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Animaciones generales */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== 12. Responsive ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    /* Estilos para modo oscuro (opcional) */
+}
+
 @media (max-width: 992px) {
-    .slide-content h1, .page-title, .about-hero-title {
+    .slide-content h1, 
+    .page-title, 
+    .about-hero-title {
         font-size: 2.5rem;
     }
     
@@ -1175,7 +1325,8 @@ footer {
         font-size: 2rem;
     }
     
-    .about-content {
+    .about-content, 
+    .contact-container {
         grid-template-columns: 1fr;
         gap: 30px;
     }
@@ -1183,11 +1334,6 @@ footer {
     .about-image {
         order: -1;
         padding-bottom: 60%;
-    }
-    
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 50px;
     }
     
     .contact-info {
@@ -1297,6 +1443,15 @@ footer {
         height: 300px;
     }
     
+    .map-overlay {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        max-width: 100%;
+        margin-top: -50px;
+        margin-bottom: 30px;
+    }
+    
     .cta-title {
         font-size: 2rem;
     }
@@ -1317,11 +1472,15 @@ footer {
 }
 
 @media (max-width: 576px) {
-    .featured-grid, .articles-grid, .categories-grid {
+    .featured-grid, 
+    .articles-grid, 
+    .categories-grid {
         grid-template-columns: 1fr;
     }
     
-    .page-title, .about-hero-title, .cta-title {
+    .page-title, 
+    .about-hero-title, 
+    .cta-title {
         font-size: 1.5rem;
     }
     
@@ -1337,7 +1496,8 @@ footer {
         font-size: 1.8rem;
     }
     
-    .about-text h3, .contact-title {
+    .about-text h3, 
+    .contact-title {
         font-size: 1.5rem;
     }
     
