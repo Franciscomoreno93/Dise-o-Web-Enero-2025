@@ -32,94 +32,6 @@
     --section-padding: 80px 5%;       /* Padding estándar para secciones */
 }
 
-@media (max-width: 768px) {
-    /* Ajustes para tablet pequeña y móvil grande */
-    .article-content-container {
-        padding: 0;
-    }
-    
-    .article-text {
-        padding: 20px;
-    }
-    
-    .article-text h2 {
-        font-size: 1.8rem;
-    }
-    
-    .article-text h3 {
-        font-size: 1.3rem;
-    }
-    
-    .article-navigation {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .article-nav-link {
-        max-width: 100%;
-    }
-    
-    .article-author {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .author-image {
-        margin: 0 auto 15px;
-    }
-}
-
-@media (max-width: 576px) {
-    /* Ajustes para móviles */
-    .featured-grid, 
-    .articles-grid, 
-    .categories-grid {
-        grid-template-columns: 1fr;  /* Una sola columna */
-    }
-    
-    /* Títulos reducidos */
-    .page-title, 
-    .about-hero-title, 
-    .section-title h2 {
-        font-size: 1.8rem;           /* Tamaño muy reducido */
-    }
-    
-    /* Hero más pequeño */
-    .hero {
-        height: 50vh;                /* Altura reducida */
-    }
-    
-    /* Título de slide reducido */
-    .slide-content h1 {
-        font-size: 1.5rem;           /* Tamaño reducido */
-    }
-    
-    /* Títulos reducidos */
-    .about-text h3, 
-    .contact-title {
-        font-size: 1.5rem;           /* Tamaño reducido */
-    }
-    
-    /* Hero about reducido */
-    .about-hero {
-        height: 300px;               /* Altura reducida */
-    }
-    
-    /* Newsletter adaptado */
-    .newsletter-form {
-        flex-direction: column;      /* Organización vertical */
-    }
-    
-    .newsletter-input {
-        border-radius: 30px;         /* Bordes redondeados completos */
-        margin-bottom: 10px;         /* Espacio inferior */
-    }
-    
-    .newsletter-btn {
-        border-radius: 30px;         /* Bordes redondeados completos */
-    }
-}
-
 /* Utilidades - Clases de utilidad para uso general */
 .highlight {
     background-color: #ffeb3b;      /* Fondo amarillo */
@@ -249,7 +161,7 @@ header {
 
 /* Secciones comunes - Estilos para cabeceras de página */
 .page-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/header-bg.jpg');  /* Overlay oscuro + imagen */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/fondo.jpg');  /* Overlay oscuro + imagen */
     background-size: cover;       /* Cubrir toda el área */
     background-position: center;  /* Centrar imagen */
     height: 300px;                /* Altura fija */
@@ -673,6 +585,7 @@ header {
     height: 100%;                    /* Altura completa */
     background-color: rgba(0, 0, 0, 0.7);  /* Fondo semi-transparente */
     z-index: 0;                      /* Debajo del contenido */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/fondo.jpg');
 }
 
 /* Contenido del hero */
@@ -1438,19 +1351,19 @@ footer {
 
 /* Estilos específicos para los artículos de skateboard */
 .page-header.skateboard-guide {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/tabla.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/fondo.jpg');
 }
 
 .page-header.skateboard-history {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/historiaskate.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/fondo.jpg');
 }
 
 .page-header.skateboard-parks {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/skatepark.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/fondo.jpg');
 }
 
 .page-header.skateboard-tricks {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/truco.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/fondo.jpg');
 }
 
 /* Responsive - Estilos adaptables a diferentes dispositivos */
@@ -1530,5 +1443,93 @@ footer {
     .main-nav li {
         margin: 10px 0;              /* Espaciado vertical */
         margin-left: 0;              /* Elimina márgen izquierdo */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para tablet pequeña y móvil grande */
+    .article-content-container {
+        padding: 0;
+    }
+    
+    .article-text {
+        padding: 20px;
+    }
+    
+    .article-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .article-text h3 {
+        font-size: 1.3rem;
+    }
+    
+    .article-navigation {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .article-nav-link {
+        max-width: 100%;
+    }
+    
+    .article-author {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .author-image {
+        margin: 0 auto 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Ajustes para móviles */
+    .featured-grid, 
+    .articles-grid, 
+    .categories-grid {
+        grid-template-columns: 1fr;  /* Una sola columna */
+    }
+    
+    /* Títulos reducidos */
+    .page-title, 
+    .about-hero-title, 
+    .section-title h2 {
+        font-size: 1.8rem;           /* Tamaño muy reducido */
+    }
+    
+    /* Hero más pequeño */
+    .hero {
+        height: 50vh;                /* Altura reducida */
+    }
+    
+    /* Título de slide reducido */
+    .slide-content h1 {
+        font-size: 1.5rem;           /* Tamaño reducido */
+    }
+    
+    /* Títulos reducidos */
+    .about-text h3, 
+    .contact-title {
+        font-size: 1.5rem;           /* Tamaño reducido */
+    }
+    
+    /* Hero about reducido */
+    .about-hero {
+        height: 300px;               /* Altura reducida */
+    }
+    
+    /* Newsletter adaptado */
+    .newsletter-form {
+        flex-direction: column;      /* Organización vertical */
+    }
+    
+    .newsletter-input {
+        border-radius: 30px;         /* Bordes redondeados completos */
+        margin-bottom: 10px;         /* Espacio inferior */
+    }
+    
+    .newsletter-btn {
+        border-radius: 30px;         /* Bordes redondeados completos */
     }
 }
