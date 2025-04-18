@@ -111,6 +111,11 @@ header {
     color: var(--primary-color);  /* Color de acento rojo */
 }
 
+.logo-img {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
 /* Contenedor de navegación */
 .main-nav ul {
     display: flex;                /* Organiza elementos horizontalmente */
@@ -1534,6 +1539,10 @@ footer {
     
     .author-image {
         margin: 0 auto 15px;
+    }
+
+    .logo-img {
+        height: 30px; /* Tamaño reducido para móviles */
     }
 }
 
