@@ -20,16 +20,16 @@
      */
     // Selector simplificado para un solo elemento (equivalente a querySelector)
     const $ = s => document.querySelector(s),
-          // Selector simplificado para múltiples elementos (equivalente a querySelectorAll)
-          $$ = s => document.querySelectorAll(s);
-    
+      // Selector simplificado para múltiples elementos (equivalente a querySelectorAll)
+      $$ = s => document.querySelectorAll(s);
+
     /**
      * NAVEGACIÓN MÓVIL
      * Implementa un menú desplegable para dispositivos móviles
      */
     const menuToggle = $('.menu-toggle'),  // Botón de hamburguesa
-          mainNav = $('.main-nav');        // Menú de navegación
-          
+      mainNav = $('.main-nav');        // Menú de navegación
+
     if (menuToggle && mainNav) {
       // Alterna la clase 'active' en el menú y cambia el ícono al hacer clic
       menuToggle.addEventListener('click', () => {
@@ -41,69 +41,74 @@
           icon.classList.toggle('fa-times');
         }
       });
+
+      // Asegúrate de que todos los elementos del menú sean visibles
+      const menuItems = mainNav.querySelectorAll('li a');
+      menuItems.forEach(item => {
+        item.style.display = 'block';
+      });
     }
-  
+
     /**
-     * SLIDER DE IMÁGENES
-     * Rotación automática de imágenes con indicadores de navegación
-     */
-    const slides = $$('.slide'),  // Todas las diapositivas
-          dots = $$('.slider-dot');  // Indicadores de navegación
-          
+ * SLIDER DE IMÁGENES
+ * Rotación automática de imágenes con indicadores de navegación
+ */
+    const slides = document.querySelectorAll('.slide');  // Todas las diapositivas
+    const dots = document.querySelectorAll('.slider-dot');  // Indicadores de navegación
+
     if (slides.length && dots.length) {
       let currentSlide = 0;  // Índice de la diapositiva actual
       let slideInterval = setInterval(nextSlide, 5000);  // Transición automática cada 5 segundos
-      
+
       // Función para avanzar a la siguiente diapositiva
       function nextSlide() {
+        goToSlide((currentSlide + 1) % slides.length);
+      }
+
+      // Función para ir a una diapositiva específica
+      function goToSlide(index) {
         // Quita la clase 'active' de todas las diapositivas e indicadores
-        slides.forEach(s => s.classList.remove('active'));
-        dots.forEach(d => d.classList.remove('active'));
-        
-        // Avanza al siguiente índice (con rotación al inicio cuando llega al final)
-        currentSlide = (currentSlide + 1) % slides.length;
-        // Activa la nueva diapositiva y su indicador
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+
+        // Actualiza el índice actual y activa la nueva diapositiva
+        currentSlide = index;
         slides[currentSlide].classList.add('active');
         dots[currentSlide].classList.add('active');
       }
-      
+
       // Manejo de clic en los indicadores para navegación manual
       dots.forEach((dot, idx) => {
         dot.addEventListener('click', () => {
           // Detiene la rotación automática temporalmente
           clearInterval(slideInterval);
-          // Desactiva todas las diapositivas e indicadores
-          slides.forEach(s => s.classList.remove('active'));
-          dots.forEach(d => d.classList.remove('active'));
-          
-          // Establece la diapositiva seleccionada como activa
-          currentSlide = idx;
-          slides[currentSlide].classList.add('active');
-          dots[currentSlide].classList.add('active');
-          
+
+          // Cambia a la diapositiva seleccionada
+          goToSlide(idx);
+
           // Reinicia la rotación automática
           slideInterval = setInterval(nextSlide, 5000);
         });
       });
     }
-  
+
     /**
      * FILTROS DE CATEGORÍAS
      * Sistema de filtrado para mostrar artículos según su categoría
      */
     const filterTabs = $$('.filter-tab'),  // Pestañas de filtrado
-          articleCards = $$('.article-card');  // Tarjetas de artículos
-          
+      articleCards = $$('.article-card');  // Tarjetas de artículos
+
     if (filterTabs.length && articleCards.length) {
       filterTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
+        tab.addEventListener('click', function () {
           // Desactiva todas las pestañas y activa la seleccionada
           filterTabs.forEach(t => t.classList.remove('active'));
           this.classList.add('active');
-          
+
           // Obtiene la categoría seleccionada
           const category = this.textContent.trim().toLowerCase();
-          
+
           // Filtra las tarjetas según la categoría
           articleCards.forEach(card => {
             const categoryEl = card.querySelector('.article-category');
@@ -112,28 +117,28 @@
               card.style.display = 'block';
               return;
             }
-            
+
             // Muestra la tarjeta si coincide con la categoría o si es 'todos'
-            card.style.display = (category === 'todos' || 
-                                 categoryEl.textContent.trim().toLowerCase() === category) ? 
-                                 'block' : 'none';
+            card.style.display = (category === 'todos' ||
+              categoryEl.textContent.trim().toLowerCase() === category) ?
+              'block' : 'none';
           });
-          
+
           // Limpia el campo de búsqueda al cambiar de categoría
           const searchInput = $('.search-input');
           if (searchInput) searchInput.value = '';
         });
       });
     }
-  
+
     /**
      * BUSCADOR DE ARTÍCULOS
      * Funcionalidad de búsqueda en tiempo real con resaltado de coincidencias
      */
     const searchInput = $('.search-input'),  // Campo de búsqueda
-          searchBtn = $('.search-btn'),      // Botón de búsqueda
-          articlesGrid = $('.articles-grid'); // Contenedor de artículos
-          
+      searchBtn = $('.search-btn'),      // Botón de búsqueda
+      articlesGrid = $('.articles-grid'); // Contenedor de artículos
+
     if (searchInput && articleCards.length) {
       // Almacena el contenido original para poder restaurarlo
       articleCards.forEach(card => {
@@ -141,15 +146,15 @@
           el.setAttribute('data-original', el.innerHTML);
         });
       });
-      
+
       // Función principal de búsqueda
       const performSearch = () => {
         const term = searchInput.value.trim().toLowerCase();  // Término de búsqueda
         const noResults = $('.no-results');  // Mensaje de "no hay resultados"
-        
+
         // Elimina el mensaje previo de "no hay resultados" si existe
         if (noResults) noResults.remove();
-        
+
         // Si el término está vacío, restaura todos los artículos
         if (!term) {
           articleCards.forEach(card => {
@@ -160,32 +165,32 @@
           });
           return;
         }
-        
+
         let foundResults = false;  // Bandera para determinar si se encontraron resultados
-        
+
         articleCards.forEach(card => {
           // Restaura el contenido original de la tarjeta
           card.querySelectorAll('[data-original]').forEach(el => {
             el.innerHTML = el.getAttribute('data-original');
           });
-          
+
           // Verifica si el filtro de categoría actual permite mostrar esta tarjeta
           let categoryMatch = true;
           const activeTab = $('.filter-tab.active');
-          
+
           if (activeTab && activeTab.textContent.trim().toLowerCase() !== 'todos') {
             const cardCategory = card.querySelector('.article-category');
             if (cardCategory) {
-              categoryMatch = cardCategory.textContent.trim().toLowerCase() === 
-                             activeTab.textContent.trim().toLowerCase();
+              categoryMatch = cardCategory.textContent.trim().toLowerCase() ===
+                activeTab.textContent.trim().toLowerCase();
             }
           }
-          
+
           // Si el texto de la tarjeta contiene el término y coincide con la categoría
           if (card.textContent.toLowerCase().includes(term) && categoryMatch) {
             card.style.display = '';
             foundResults = true;
-            
+
             // Resalta las coincidencias del término en el texto
             card.querySelectorAll('h3, p').forEach(el => {
               const original = el.getAttribute('data-original');
@@ -193,7 +198,7 @@
               const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
               // Reemplaza las coincidencias con etiquetas span resaltadas
               el.innerHTML = original.replace(
-                new RegExp(`(${escapedTerm})`, 'gi'), 
+                new RegExp(`(${escapedTerm})`, 'gi'),
                 '<span class="highlight">$1</span>'
               );
             });
@@ -202,7 +207,7 @@
             card.style.display = 'none';
           }
         });
-        
+
         // Muestra mensaje cuando no hay resultados
         if (!foundResults && articlesGrid) {
           const messageDiv = document.createElement('div');
@@ -214,7 +219,7 @@
           articlesGrid.appendChild(messageDiv);
         }
       };
-      
+
       // Evento de clic en el botón de búsqueda
       if (searchBtn) {
         searchBtn.addEventListener('click', e => {
@@ -222,7 +227,7 @@
           performSearch();
         });
       }
-      
+
       // Evento de tecla Enter en el campo de búsqueda
       searchInput.addEventListener('keydown', e => {
         if (e.key === 'Enter') {
@@ -230,7 +235,7 @@
           performSearch();
         }
       });
-      
+
       // Búsqueda en tiempo real con retraso para mejorar rendimiento
       let searchTimeout;
       searchInput.addEventListener('input', () => {
@@ -238,13 +243,13 @@
         searchTimeout = setTimeout(performSearch, 300);  // Espera 300ms después de dejar de escribir
       });
     }
-  
+
     /**
-     * ACORDEÓN PARA FAQS
-     * Implementa un sistema de acordeón para mostrar/ocultar respuestas
-     */
-    const faqItems = $$('.faq-item');  // Elementos de preguntas frecuentes
-    
+ * ACORDEÓN PARA FAQS
+ * Implementa un sistema de acordeón para mostrar/ocultar respuestas
+ */
+    const faqItems = document.querySelectorAll('.faq-item');  // Elementos de preguntas frecuentes
+
     if (faqItems.length) {
       faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
@@ -260,7 +265,7 @@
         }
       });
     }
-  
+
     /**
      * GESTIÓN DE FORMULARIOS
      * Funciones genéricas para manejar formularios
@@ -273,7 +278,7 @@
         validator(form);     // Ejecuta la función de validación personalizada
       });
     };
-    
+
     /**
      * FORMULARIO DE CONTACTO
      * Validación y procesamiento del formulario de contacto
@@ -289,37 +294,14 @@
           field.classList.remove('error');
         }
       });
-      
+
       if (!isValid) {
         alert('Por favor completa todos los campos requeridos');
         return;
       }
-      
+
       // Simulación de envío exitoso
       alert('¡Gracias por tu mensaje! Te contactaremos pronto.');
-      form.reset();  // Limpia el formulario
-    });
-    
-    /**
-     * FORMULARIO DE NEWSLETTER
-     * Validación y procesamiento de suscripción al boletín
-     */
-    handleForm($('.newsletter-form'), form => {
-      const input = form.querySelector('input');
-      // Verifica que el correo no esté vacío
-      if (!input || !input.value.trim()) {
-        alert('Por favor ingresa tu correo electrónico');
-        return;
-      }
-      
-      // Valida formato de correo electrónico
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value)) {
-        alert('Por favor ingresa un correo electrónico válido');
-        return;
-      }
-      
-      // Simulación de suscripción exitosa
-      alert(`¡Gracias por suscribirte! Recibirás nuestras actualizaciones en: ${input.value}`);
       form.reset();  // Limpia el formulario
     });
   });

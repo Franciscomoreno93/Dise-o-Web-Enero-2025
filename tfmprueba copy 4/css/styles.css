@@ -257,6 +257,19 @@ header {
     justify-content: center;        /* Centrado horizontal */
 }
 
+/* Estilos específicos para cada slide */
+#slide1 {
+    background-image: url('../images/slide.jpg');
+}
+
+#slide2 {
+    background-image: url('../images/slidee.jpg');
+}
+
+#slide3 {
+    background-image: url('../images/slideee.jpg');
+}
+
 /* Slide activo */
 .slide.active {
     opacity: 1;                     /* Totalmente visible */
@@ -277,6 +290,12 @@ header {
     font-size: 3rem;                /* Tamaño grande */
     margin-bottom: 20px;            /* Espacio inferior */
     text-transform: uppercase;      /* Todo en mayúsculas */
+}
+
+.slide-heading {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 /* Texto del slide */
@@ -1366,9 +1385,44 @@ footer {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/fondo.jpg');
 }
 
+/* Actualización de los estilos del menú móvil */
+
+/* Aseguramos que cuando el menú móvil está activo, tenga la altura suficiente */
+.main-nav.active {
+    max-height: 300px !important; /* Usamos !important para sobrescribir cualquier otra regla */
+    overflow-y: auto; /* Permitir scroll si hay muchos items */
+}
+
+/* Aseguramos que todos los elementos del menú sean visibles */
+.main-nav.active ul {
+    display: flex !important;
+    flex-direction: column;
+    padding: 20px 5%;
+}
+
+.main-nav.active li {
+    margin: 10px 0;
+    margin-left: 0;
+    display: block;
+    width: 100%;
+}
+
+.main-nav.active a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Ajustes adicionales para el ícono del menú */
+.menu-toggle i.fa-times {
+    color: var(--primary-color); /* Cambia el color del ícono X para que sea más visible */
+}
+
 /* Responsive - Estilos adaptables a diferentes dispositivos */
 @media (max-width: 992px) {
     /* Ajustes para tablet grande */
+    .slide-content,
+    .slide-heading,
     .slide-content h1, 
     .page-title, 
     .about-hero-title {
@@ -1504,7 +1558,9 @@ footer {
     }
     
     /* Título de slide reducido */
-    .slide-content h1 {
+    .slide-content h1,
+    .slide-content,
+    .slide-heading {
         font-size: 1.5rem;           /* Tamaño reducido */
     }
     
