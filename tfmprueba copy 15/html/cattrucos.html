@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos, enlaces a recursos externos y archivos locales -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkateWorld - Categoría Trucos</title>
+    <link rel="shortcut icon" href="../images/supremelogo.svg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nova+Square&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script defer src="../js/index.js"></script>
+</head>
+
+<body>
+    <!-- Cabecera - Logo y menú de navegación principal -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="../html/index.html" title="Página de inicio de SkateWorld">
+                    <img src="../images/logo2.svg" alt="SkateWorld Logo" class="logo-img" loading="lazy">
+                </a>
+            </div>
+            <!-- Navegación principal con la opción "Categorías" marcada como activa -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../html/index.html" title="Ir a la página de inicio">Inicio</a></li>
+                    <li><a href="../html/articulos.html" title="Ver todos los artículos">Artículos</a></li>
+                    <li><a href="../html/categorias.html" class="active" title="Explorar categorías">Categorías</a></li>
+                    <li><a href="../html/acerca.html" title="Conocer más sobre nosotros">Acerca de</a></li>
+                    <li><a href="../html/contacto.html" title="Contactar con SkateWorld">Contacto</a></li>
+                </ul>
+            </nav>
+            <!-- Botón de menú para dispositivos móviles -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Encabezado de página - Título y descripción de la categoría -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">Categoría: Trucos</h1>
+            <p class="page-description">Descubre los mejores tutoriales y guías para dominar los trucos más populares
+                del skateboarding.</p>
+        </div>
+    </section>
+
+    <!-- Sección de artículos - Listado de artículos de la categoría -->
+    <section class="articles-section">
+        <div class="articles-grid" id="categoria-trucos-images">
+            <!-- Artículo 1 - Estructura: imagen, categoría, título, extracto y metadatos -->
+            <article class="article-card">
+                <a href="../html/artguia.html" class="article-card-link">
+                    <picture>
+                        <source srcset="../images/ollie.webp" type="image/jpeg">
+                        <img src="../images/ollie.webp" alt="Skater ejecutando un ollie perfecto en la calle"
+                            class="article-img" loading="lazy">
+                    </picture>
+                    <div class="article-content">
+                        <span class="article-category">Tutoriales</span>
+                        <h2 class="article-title">Guía Completa para Dominar el Ollie</h2>
+                        <p class="article-excerpt">Aprende paso a paso el truco fundamental del skateboarding que te
+                            abrirá las puertas a un mundo de posibilidades.</p>
+                        <!-- Metadatos del artículo: fecha y comentarios -->
+                        <div class="article-meta">
+                            <span class="article-date"><i class="far fa-calendar-alt"></i> 15 Abril, 2025</span>
+                            <span class="article-comments"><i class="far fa-comment"></i> 24 comentarios</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Artículo 2 - Similar estructura al primer artículo -->
+            <article class="article-card">
+                <a href="../html/arttrucos.html" class="article-card-link">
+                    <picture>
+                        <source srcset="../images/truco.webp" type="image/jpeg">
+                        <img src="../images/truco.webp" alt="Principiante practicando trucos básicos de skateboarding"
+                            class="article-img" loading="lazy">
+                    </picture>
+                    <div class="article-content">
+                        <span class="article-category">Trucos</span>
+                        <h2 class="article-title">10 Trucos Esenciales para Principiantes</h2>
+                        <p class="article-excerpt">Aprende los fundamentos del skateboarding con esta guía para
+                            principiantes que te ayudará a dominar tus primeros trucos.</p>
+                        <div class="article-meta">
+                            <span class="article-date"><i class="far fa-calendar-alt"></i> 10 Abril, 2025</span>
+                            <span class="article-comments"><i class="far fa-comment"></i> 18 comentarios</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Artículo 3 - Similar estructura a los anteriores -->
+            <article class="article-card">
+                <a href="../html/artfilmar.html" class="article-card-link">
+                    <picture>
+                        <source srcset="../images/film.webp" type="image/jpeg">
+                        <img src="../images/film.webp" alt="Filmmaker grabando a un skater en acción"
+                            class="article-img" loading="lazy">
+                    </picture>
+                    <div class="article-content">
+                        <span class="article-category">Tecnología</span>
+                        <h2 class="article-title">Cómo Filmar tus Trucos como un Profesional</h2>
+                        <p class="article-excerpt">Guía completa para capturar videos de skateboarding de alta calidad
+                            con cualquier presupuesto.</p>
+                        <div class="article-meta">
+                            <span class="article-date"><i class="far fa-calendar-alt"></i> 5 Abril, 2025</span>
+                            <span class="article-comments"><i class="far fa-comment"></i> 15 comentarios</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Sección de newsletter - Formulario de suscripción -->
+    <section class="newsletter">
+        <h2 class="newsletter-title">Suscríbete a Nuestro Newsletter</h2>
+        <p class="newsletter-text">Recibe las últimas actualizaciones, tutoriales y eventos directamente en tu bandeja
+            de entrada.</p>
+        <form class="newsletter-form" action="nose" method="post">
+            <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="newsletter-btn" title="Suscribirse al newsletter">Suscribirme</button>
+        </form>
+    </section>
+
+    <!-- Pie de página - Información del sitio, enlaces y contacto -->
+    <footer>
+        <div class="footer-content">
+            <!-- Columna con información sobre el sitio -->
+            <div class="footer-column">
+                <h3>Sobre SkateWorld</h3>
+                <p>Somos una comunidad apasionada por el skateboarding, dedicada a compartir conocimientos, experiencias
+                    y novedades del mundo del skate.</p>
+            </div>
+            <!-- Columna con enlaces rápidos a las principales secciones -->
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="../html/index.html" title="Volver a la página principal">Inicio</a></li>
+                    <li><a href="../html/articulos.html" title="Ver todos los artículos disponibles">Artículos</a></li>
+                    <li><a href="../html/categorias.html" title="Navegar por categorías de contenido">Categorías</a>
+                    </li>
+                    <li><a href="../html/acerca.html" title="Conocer más sobre SkateWorld">Acerca de</a></li>
+                    <li><a href="../html/contacto.html" title="Formulario de contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Columna con información de contacto y redes sociales -->
+            <div class="footer-column">
+                <h3>Contáctanos</h3>
+                <p>Email: info@skateworld.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+                <!-- Iconos de redes sociales -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/skateworld" title="Visitar Facebook de SkateWorld"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/skateworld" title="Visitar Twitter de SkateWorld"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/skateworld" title="Visitar Instagram de SkateWorld"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/skateworld" title="Canal de YouTube de SkateWorld"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Nota de copyright -->
+        <div class="copyright">
+            <p>&copy; 2025 SkateWorld. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos, título y enlaces a recursos externos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkateWorld - Categorías</title>
+    <link rel="shortcut icon" href="../images/supremelogo.svg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nova+Square&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script defer src="../js/index.js"></script>
+</head>
+
+<body>
+    <!-- Cabecera - Logo y menú de navegación principal -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="../html/index.html" title="Página de inicio de SkateWorld">
+                    <img src="../images/logo2.svg" alt="SkateWorld Logo" class="logo-img" loading="lazy">
+                </a>
+            </div>
+            <!-- Navegación principal con la opción "Categorías" marcada como activa -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../html/index.html" title="Ir a la página de inicio">Inicio</a></li>
+                    <li><a href="../html/articulos.html" title="Ver todos los artículos">Artículos</a></li>
+                    <li><a href="../html/categorias.html" class="active" title="Explorar categorías">Categorías</a></li>
+                    <li><a href="../html/acerca.html" title="Conocer más sobre nosotros">Acerca de</a></li>
+                    <li><a href="../html/contacto.html" title="Contactar con SkateWorld">Contacto</a></li>
+                </ul>
+            </nav>
+            <!-- Botón de menú hamburguesa para dispositivos móviles -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Encabezado de página - Título y descripción -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">Categorías</h1>
+            <p class="page-description">Explora nuestro contenido por categorías y encuentra exactamente lo que estás
+                buscando.</p>
+        </div>
+    </section>
+
+    <!-- Sección de categorías - Grid de tarjetas con las diferentes categorías -->
+    <section class="categories-section">
+        <div class="categories-grid">
+            <!-- Categoría 1 - Trucos -->
+            <div class="category-card">
+                <picture>
+                    <source srcset="../images/categoria.webp" type="image/jpeg">
+                    <img src="../images/categoria.webp" alt="Skater realizando diversos trucos técnicos en un skatepark"
+                        class="category-img" loading="lazy">
+                </picture>
+                <!-- Capa superpuesta con título, contador y enlace -->
+                <div class="category-overlay">
+                    <h3 class="category-title">Trucos</h3>
+                    <span class="category-count">3 artículos</span>
+                    <a href="../html/cattrucos.html" class="category-link"
+                        title="Ver todos los artículos sobre trucos">Explorar <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Categoría 2 - Equipamiento -->
+            <div class="category-card">
+                <picture>
+                    <source srcset="../images/categoriaa.webp" type="image/jpeg">
+                    <img src="../images/categoriaa.webp"
+                        alt="Conjunto de equipamiento completo para skateboarding: tabla, ruedas, trucks y protecciones"
+                        class="category-img" loading="lazy">
+                </picture>
+                <div class="category-overlay">
+                    <h3 class="category-title">Equipamiento</h3>
+                    <span class="category-count">2 artículos</span>
+                    <a href="../html/catequip.html" class="category-link"
+                        title="Ver todos los artículos sobre equipamiento">Explorar <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Categoría 3 - Cultura -->
+            <div class="category-card">
+                <picture>
+                    <source srcset="../images/categoriaaa.webp" type="image/jpeg">
+                    <img src="../images/categoriaaa.webp"
+                        alt="Grupo de skaters compartiendo momentos representativos de la cultura urbana del skateboarding"
+                        class="category-img" loading="lazy">
+                </picture>
+                <div class="category-overlay">
+                    <h3 class="category-title">Cultura</h3>
+                    <span class="category-count">2 artículos</span>
+                    <a href="../html/catcult.html" class="category-link"
+                        title="Ver todos los artículos sobre cultura skate">Explorar <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Categoría 4 - Eventos -->
+            <div class="category-card">
+                <picture>
+                    <source srcset="../images/categoriaaaa.webp" type="image/jpeg">
+                    <img src="../images/categoriaaaa.webp"
+                        alt="Competición de skateboarding con público y participantes en acción" class="category-img"
+                        loading="lazy">
+                </picture>
+                <div class="category-overlay">
+                    <h3 class="category-title">Eventos</h3>
+                    <span class="category-count">2 artículos</span>
+                    <a href="../html/catevent.html" class="category-link"
+                        title="Ver todos los artículos sobre eventos">Explorar <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de newsletter - Formulario de suscripción -->
+    <section class="newsletter">
+        <h2 class="newsletter-title">Suscríbete a Nuestro Newsletter</h2>
+        <p class="newsletter-text">Recibe las últimas actualizaciones, tutoriales y eventos directamente en tu bandeja
+            de entrada.</p>
+        <form class="newsletter-form" action="nose" method="post">
+            <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="newsletter-btn" title="Suscribirse al newsletter">Suscribirme</button>
+        </form>
+    </section>
+
+    <!-- Pie de página - Información del sitio, enlaces y contacto -->
+    <footer>
+        <div class="footer-content">
+            <!-- Columna con información sobre el sitio -->
+            <div class="footer-column">
+                <h3>Sobre SkateWorld</h3>
+                <p>Somos una comunidad apasionada por el skateboarding, dedicada a compartir conocimientos, experiencias
+                    y novedades del mundo del skate.</p>
+            </div>
+            <!-- Columna con enlaces rápidos a las principales secciones -->
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="../html/index.html" title="Volver a la página principal">Inicio</a></li>
+                    <li><a href="../html/articulos.html" title="Ver todos los artículos disponibles">Artículos</a></li>
+                    <li><a href="../html/categorias.html" title="Navegar por categorías de contenido">Categorías</a>
+                    </li>
+                    <li><a href="../html/acerca.html" title="Conocer más sobre SkateWorld">Acerca de</a></li>
+                    <li><a href="../html/contacto.html" title="Formulario de contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Columna con información de contacto y redes sociales -->
+            <div class="footer-column">
+                <h3>Contáctanos</h3>
+                <p>Email: info@skateworld.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+                <!-- Iconos de redes sociales -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/skateworld" title="Visitar Facebook de SkateWorld"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/skateworld" title="Visitar Twitter de SkateWorld"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/skateworld" title="Visitar Instagram de SkateWorld"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/skateworld" title="Canal de YouTube de SkateWorld"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Nota de copyright -->
+        <div class="copyright">
+            <p>&copy; 2025 SkateWorld. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
