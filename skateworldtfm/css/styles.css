@@ -596,3 +596,299 @@ header {
 }
 
 /* Contenido del hero */
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 50rem;
+    padding: 0 1.25rem;
+}
+
+/* Título principal */
+.about-hero-title {
+    font-size: clamp(2rem, 7vw, 3.5rem);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+/* Subtítulo */
+.about-hero-subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    margin-bottom: 1.875rem;
+    font-weight: 400;
+}
+
+/* Sección principal About */
+.about-section {
+    padding: var(--section-padding);
+}
+
+/* Contenido principal */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.125rem;
+    align-items: center;
+}
+
+/* Texto en About */
+.about-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-bottom: 0.9375rem;
+}
+
+/* Línea decorativa */
+.about-text h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 3.125rem;
+    height: 0.1875rem;
+    background-color: var(--primary-color);
+}
+
+/* Párrafos en About */
+.about-text p {
+    margin-bottom: 1.25rem;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+/* Contenedor de imagen */
+.about-image {
+    position: relative;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+/* Imagen en about */
+.about-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Timeline - Línea de tiempo */
+.timeline-section {
+    padding: var(--section-padding);
+    background-color: var(--section-alt-bg);
+}
+
+/* Contenedor de timeline */
+.timeline {
+    position: relative;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+/* Línea central vertical */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 0.1875rem;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -0.9375rem;
+}
+
+/* Elemento de timeline */
+.timeline-item {
+    padding: 0.625rem 2.5rem;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/* Círculo decorativo */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    right: -0.625rem;
+    background-color: white;
+    border: 0.1875rem solid var(--primary-color);
+    top: 1.25rem;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Elemento izquierdo */
+.timeline-item.left {
+    left: 0;
+}
+
+/* Elemento derecho */
+.timeline-item.right {
+    left: 50%;
+}
+
+/* Ajuste de círculo para elementos derechos */
+.timeline-item.right::after {
+    left: -0.625rem;
+}
+
+/* Contenido de timeline */
+.timeline-content {
+    padding: 1.25rem;
+    background-color: white;
+    border-radius: 0.625rem;
+    box-shadow: var(--shadow-md);
+}
+
+/* Año en timeline */
+.time-line-year {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.625rem;
+}
+
+/* Título en timeline */
+.timeline-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.625rem;
+}
+
+/* Texto en timeline */
+.timeline-text {
+    color: var(--text-secondary);
+}
+
+/* Team - Sección de equipo */
+.team-section {
+    padding: var(--section-padding);
+}
+
+/* Miembro del equipo */
+.team-member {
+    background-color: white;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform var(--transition-fast);
+}
+
+/* Estado hover de miembro del equipo */
+.team-member:hover {
+    transform: translateY(-0.625rem);
+}
+
+/* Contenedor de imagen de miembro */
+.team-image {
+    height: 15.625rem;
+    overflow: hidden;
+}
+
+/* Imagen de miembro */
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+/* Efecto hover en imagen */
+.team-member:hover .team-image img {
+    transform: scale(1.1);
+}
+
+/* Información de miembro */
+.team-info {
+    padding: 1.25rem;
+}
+
+/* Nombre de miemrbo */
+.team-name {
+    font-size: 1.3rem;
+    margin-bottom: 0.3125rem;
+}
+
+/* Rol de miembro */
+.team-role {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    margin-bottom: 0.9375rem;
+}
+
+/* Biografía de miemrbo */
+.team-bio {
+    color: var(--text-secondary);
+    margin-bottom: 0.9375rem;
+    font-size: 0.95rem;
+}
+
+/* Redes sociales de miembro */
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 0.9375rem;
+}
+
+/* Enlaces a redes sociales */
+.team-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1875rem;
+    height: 2.1875rem;
+    background-color: var(--section-alt-bg);
+    border-radius: 50%;
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+}
+
+/* Estado hover de enlaces sociales */
+.team-social a:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Contact - Sección de contacto */
+.contact-section {
+    padding: var(--section-padding);
+}
+
+/* Contenedor de contacto */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.125rem;
+}
+
+/* Información de contacto */
+.contact-info {
+    padding-right: 1.25rem;
+}
+
+/* Título de contacto */
+.contact-title {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-bottom: 0.9375rem;
+}
+
+/* Línes decorativa */
+.contact-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 3.125rem;
+    background-color: var(--primary-color);
+}
+
+/* Texto de contacto */
