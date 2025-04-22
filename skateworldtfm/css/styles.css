@@ -451,3 +451,148 @@ header {
     background-color: var(--primary-color);
     color: white;
 }
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    background-color: white;
+    border-radius: 1.875rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Campo de entrada de búsqueda */
+.search-input {
+    border: none;
+    padding: 0.625rem 0.9375rem;
+    flex: 1;
+    min-height: 12.5rem;
+}
+
+/* Enfoque en campo de búsqueda */
+.search-input:focus {
+    outline: none;
+}
+
+/* Botón de búsqueda */
+.search-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.625 1.25rem;
+    cursor: pointer;
+}
+
+/* Categorías - Sección de categorías */
+.categories-section {
+    padding: var(--section-padding);
+}
+
+/* Tarjeta de categoría */
+.category-card {
+    position: relative;
+    height: 15.625rem;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-fast);
+}
+
+/* Estado hover de categoría */
+.category-card:hover {
+    transform: translateY(-0.625rem);
+}
+
+/* Imagen de categoría */
+.category-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+/* Efecto hover en imagen */
+.category-card:hover .category-img {
+    transform: scale(1.1);
+}
+
+/* Overlay de categoría */
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.25rem;
+    color: white;
+}
+
+/* Título de categoría */
+.category-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.3125rem;
+    font-weight: 600;
+}
+
+/* Contador de categoría */
+.category-count {
+    font-size: 0.9rem;
+    margin-bottom: 0.625rem;
+    display: inline-block;
+}
+
+/* Enlace de categoría */
+.category-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Icono en enlace de categoría */
+.category-link i {
+    margin-left: 0.3125rem;
+    transition: transform var(--transition-fast);
+}
+
+/* Efecto hover en icono */
+.category-card:hover .category-link i {
+    transform: translateX(0.3125rem);
+}
+
+/* About - Sección acerca de */
+.about-hero {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 50vh;
+    min-height: 31.25rem;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Overlay oscuro */
+.about-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/fondo.webp);
+}
+
+/* Contenido del hero */
