@@ -1,0 +1,453 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bona Nova SC", serif;
+}
+
+/* Definición de variables globales de colores y estilos */
+:root{
+    --primary-color: #ff3e3e;
+    --primary-hover: #e02020;
+    --dark-bg: #1a1a1a;
+    --light-bg: #f8f8f8;
+    --text-primary: #333;
+    --text-secondary: #666;
+    --text-light: #ccc;
+    --text-gray: #888;
+    --card-bg: white;
+    --border-light: #ddd;
+    --filter-bg: #eee;
+    --section-alt-bg: #f1f1f1;
+
+    /* Sombras*/
+    --shadow-sm: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
+    --shadow-header: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+
+    /* Transiciones */
+    --transition-fast: 0.3s;
+    --transition-slow: 0.5s;
+
+    /* Espaciado común */
+    --section-padding: 5rem 5%;
+}
+
+/* Estilos base del cuerpo */
+body {
+    background-color: var(--light-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Enlaces - Restablecer estilos predeterminados */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Listas - Eliminar viñetas predeterminadas */
+ul {
+    list-style: none;
+}
+
+/* Imágenes - Asegura responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header y navegación */
+header {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 0 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-header);
+}
+
+/* Contenedor header */
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.375rem;
+}
+
+/* Logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--primary-color);
+}
+
+.logo img {
+    height: 2.5rem;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* Conteneder de navegación */
+.main-nav ul {
+    display: flex;
+}
+
+/* Elementos de navegación */
+.main-nav li {
+    margin-left: 1.875rem;
+    position: relative;
+}
+
+/* Enlaces de navegación */
+.main-nav a {
+    font-weight: 500;
+    padding: 0.625rem 0;
+    display: inline-block;
+    transition: color var(--transition-fast);
+}
+
+/* Estados hover y activo de navegación */
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--primary-color);
+}
+
+/* Línea de subrayado en navegación (estado normal) */
+.main-nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.125rem;
+    background: var(--primary-color);
+    transition: width var(--transition-fast);
+}
+
+/* Línea de subrayado en navegación (hover/activo) */
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+/* Botón menú móvil */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Secciones comunes */
+.page-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/fondo.webp');
+    background-size: cover;
+    background-position: center;
+    height: 30vh;
+    min-height: 18.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* Título */
+.page-title {
+    font-size: 3rem;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+/* Descripción de página */
+.page-description {
+    max-width: 37.5rem;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Títulos sección */
+.section-title {
+    text-align: center;
+    margin-bottom: 3.125rem;
+    position: relative;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+/* Línea decorativa */
+.section-title h2::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 0.1875rem;
+    background-color: var(--primary-color);
+    margin: 0.625rem auto 0;
+}
+
+/* Botón estándar */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5625rem;
+    border-radius: 1.875rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.0625rem;
+    transition: background-color var(--transition-fast);
+}
+
+/* Estado hover del botón */
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Hero y Slider */
+.hero {
+    position: relative;
+    height: 80vh;
+    min-height: 31.25rem;
+    overflow: hidden;
+}
+
+/* Contenedor del slider */
+.slider {
+    height: 100%;
+    position: relative;
+}
+
+/* Slides individuales */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos específicos para cada slide */
+#slide1 {
+    background-image: url('../images/slide.webp');
+}
+
+#slide2 {
+    background-image: url('../images/slidee.webp');
+}
+
+#slide3 {
+    background-image: url('../images/slideee.webp');
+}
+
+/* Slide activo */
+.slide.active {
+    opacity: 1;
+}
+
+/* Contenido del slide */
+.slide-content {
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 50rem;
+    padding: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 0.3125rem;
+}
+
+/* Título del slide */
+.slide-content h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+.slide-heading {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+}
+
+/* Texto del slide */
+.slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1.875rem;
+}
+
+/* Navegación del slider */
+.slider-nav {
+    position: absolute;
+    bottom: 1.875rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+/* Puntos de navegación */
+.slider-dot {
+    width: 0.9375rem;
+    height: 0.9375rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+/* Punto activo */
+.slider-dot.active {
+    background-color: var(--primary-color);
+}
+
+/* Artículos y Cards */
+.featured,
+.articles-section {
+    padding: var(--section-padding);
+}
+
+/* Grids para elementos destacados y artículos */
+.featured-grid,
+.articles-grid,
+.categories-grid,
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+    gap: 1.875rem;
+}
+
+/* Tarjetas estándar */
+.card,
+.article-card {
+    background-color: var(--card-bg);
+    border-radius: 0.625rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+/* Estado hover de tarjetas */
+.card:hover,
+.article-card:hover {
+    transform: translateY(-0.625rem);
+    box-shadow: 0 0.9375rem 1.5625rem rgba(0, 0, 0, 0.15);
+}
+
+/* Contenedor de imagen en tarjetas */
+.card-img,
+.article-img {
+    height: 12.5rem;
+    overflow: hidden;
+}
+
+/* Imágenes en tarjetas */
+.card-img img,
+.article-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+/* Efecto hover en imágenes */
+.card:hover .card-img img,
+.article-card:hover .article-img img {
+    transform: scale(1.1);
+}
+
+/* Contenido de texto en tarjetas */
+.card-content,
+.article-content {
+    padding: 1.25rem;
+}
+
+/* Títulos de tarjetas */
+.card-title,
+.article-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.625rem;
+}
+
+/* Categorías en tarjetas */
+.card-category,
+.article-category {
+    display: inline-block;
+    background-color: var(--filter-bg);
+    padding: 0.3125rem 0.625rem;
+    font-size: 0.8rem;
+    border-radius: 0.9375rem;
+    margin-bottom: 0.9375rem;
+    color: #555;
+}
+
+/* Texto principal en tarjetas */
+.card-text,
+.article-excerpt {
+    margin-bottom: 1.25rem;
+    color: var(--text-secondary);
+}
+
+/* Enlaces en tarjetas */
+.card-link,
+.article-link {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Metadatos de artículos */
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.9375rem;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+/* Filtros - Barra de filtrado y búsqueda */
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+/* Pestañas de filtrado */
+.filter-tabs {
+    display: flex;
+    gap: 0.9375rem;
+    flex-wrap: wrap;
+}
+
+/* Pestaña individual */
+.filter-tab {
+    padding: 0.5rem 1.25rem;
+    background-color: var(--filter-bg);
+    border-radius: 1.875rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+/* Hover y Activo de pestañas */
+.filter-tab:hover,
+.filter-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+}
