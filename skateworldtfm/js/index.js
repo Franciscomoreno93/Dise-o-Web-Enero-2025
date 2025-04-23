@@ -1,12 +1,12 @@
 /**
  * JS principal de SkateWorl
- * Implementa funcionalidades interactivas: navegación móvil, slider,
+ * Navegación móvil, slider,
  * filtrado por categorías, búsqueda en tiempo real, acordeón de FAQs y validación de formluarios
  */
 (() => {
-  // Espera a que el DOM esté completamente cargado
+  // Espera a que el DOM esté  cargado
   document.addEventListener('DOMContentLoaded', () => {
-    // Selectores simplificados para acceder más fácilmente a los elementos del DOM
+    // Selectores simplificados para acceder más fácilmente al DOM
     const $ = document.querySelector.bind(document),
       $$ = document.querySelectorAll.bind(document);
 
@@ -25,14 +25,14 @@
       mainNav.classList.toggle('active');
       const icon = menuToggle.querySelector('i');
       if (icon) {
-        // Alterna entre iconos hamburguesa y cierre (X)
+        // Alterna entre iconos hamburguesa
         icon.classList.toggle('fa-bars');
         icon.classList.toggle('fa-times');
       }
     };
 
     if (menuToggle && mainNav) {
-      // Evento: Click en botón de menú para mostrar/ocultar navegación en móviles
+      // Evento: Click en botón de menú para mostrar y ocultar navegación en móviles
       menuToggle.addEventListener('click', handleMenuToggle);
     }
 
@@ -41,10 +41,10 @@
      */
     // Elementos para el carrusel/slider
     const slides = $$('.slide'),    // Conjunto de diapositivas
-      dots = $$('.slider-dot'); // Indicadores/controles del slider
+      dots = $$('.slider-dot'); 
 
     if (slides.length && dots.length) {
-      let currentSlide = 0;  // Índice de la diapositiva actual
+      let currentSlide = 0;  
       let slideInterval;     // Variable para almacenar el temporizador de rotación automática
 
       /**
@@ -70,7 +70,7 @@
 
       /**
        * Handler para iniciar la rotación automática de diapositivas
-       * @returns {number} ID del intervalo para poder cancelarlo después
+       * @returns {number} 
        */
       const handleStartSlideInterval = () => slideInterval = setInterval(handleNextSlide, 5000);
 
@@ -92,13 +92,14 @@
 
       // Configurar navegación manual para el slider
       dots.forEach((dot, idx) => {
-        // Evento: Click en un indicador/dot del slider
+        // Evento
         dot.addEventListener('click', () => handleDotClick(idx));
       });
     }
 
     /**
      * FILTROS DE CATEGORÍAS Y BÚSQUEDA
+     * Me apoyé en la ia para resolver errores y problemas en las funciones filtro
      */
     // Elementos para el sistema de filtrado y búsqueda
     const filterTabs = $$('.filter-tab'),    // Pestañas de categorías
@@ -130,7 +131,7 @@
 
     /**
      * Handler para el filtrado por categorías
-     * @param {Element} clickedTab - La pestaña de categoría clickeada
+     * @param {Element} clickedTab 
      */
     const handleCategoryFilter = (clickedTab) => {
       // Actualiza las pestañas: quita la clase active de todas
@@ -156,7 +157,6 @@
           'block' : 'none';
       });
 
-      // Limpia el campo de búsqueda para evitar confusiones
       if (searchInput) searchInput.value = '';
       
       // Restaura el contenido original (sin resaltado de búsqueda)
@@ -189,7 +189,6 @@
       // Si el término está vacío, restaura todas las tarjetas
       if (!term) {
         handleRestoreOriginalContent();
-        // Muestra todas las tarjetas (considerando el filtro de categoría)
         articleCards.forEach(card => {
           card.style.display = '';
         });
@@ -203,7 +202,6 @@
       const activeTab = $('.filter-tab.active');
       const activeCategory = activeTab ?
                             activeTab.textContent.trim().toLowerCase() : null;
-      // Determina si se deben mostrar todas las categorías
       const showAllCategories = !activeCategory || activeCategory === 'todos';
 
       // Procesa cada tarjeta de artículo
@@ -232,7 +230,6 @@
           card.querySelectorAll('h3, p').forEach(el => {
             // Obtiene el texto original
             const original = el.getAttribute('data-original');
-            // Escapa caracteres especiales en el término
             const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             // Reemplaza coincidencias con un span resaltado
             el.innerHTML = original.replace(
@@ -241,7 +238,6 @@
             );
           });
         } else {
-          // Oculta las tarjetas que no coinciden
           card.style.display = 'none';
         }
       });
@@ -255,7 +251,6 @@
           <p>No se encontraron resultados para: <strong>"${term}"</strong></p>
           <p>Intenta con otros términos o navega por categorías.</p>
         `;
-        // Inserta el mensaje en el grid de artículos
         articlesGrid.appendChild(messageDiv);
       }
     };
@@ -266,22 +261,22 @@
       const debouncedSearch = debounce(handleSearch, 300);
       
       /**
-       * Handler para el clic en el botón de búsqueda
+       * Handler para el clic en  botón de búsqueda
        * @param {Event} e - Evento de clic
        */
       const handleSearchButtonClick = (e) => {
-        e.preventDefault(); // Previene envío de formulario
-        handleSearch();     // Ejecuta búsqueda inmediatamente
+        e.preventDefault(); 
+        handleSearch();     
       };
       
       /**
        * Handler para el evento keydown en el campo de búsqueda
-       * @param {Event} e - Evento de teclado
+       * @param {Event} e 
        */
       const handleSearchKeydown = (e) => {
         if (e.key === 'Enter') {
-          e.preventDefault(); // Previene envío de formulario
-          handleSearch();     // Ejecuta búsqueda inmediatamente
+          e.preventDefault(); 
+          handleSearch();     
         }
       };
       
@@ -290,10 +285,10 @@
         searchBtn.addEventListener('click', handleSearchButtonClick);
       }
 
-      // Evento: Presionar Enter en el campo de búsqueda
+      // Evento
       searchInput.addEventListener('keydown', handleSearchKeydown);
 
-      // Evento: Escribir en el campo de búsqueda (con debounce)
+      // Evento
       searchInput.addEventListener('input', debouncedSearch);
     }
 
