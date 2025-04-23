@@ -66,7 +66,7 @@
        * Hanlder para avanzar a la siguiente diapositiva
        * Usa el operador módulo (%) para volver al inicio cuando llega al final
        */
-      const handleNextSlide = () => goToSlide((currentSlide + 1) % slides.lenght);
+      const handleNextSlide = () => goToSlide((currentSlide + 1) % slides.length);
 
       /**
        * Handler para iniciar la rotación automática de diapositivas
@@ -103,12 +103,12 @@
     // Elementos para el sistema de filtrado y búsqueda
     const filterTabs = $$('.filter-tab'),    // Pestañas de categorías
           articleCards = $$('.article-card'),  // Tarjetas de artículos
-          searchInput = $('.search-input');  // Campo de búsqueda
-          searchBtn = $('search-btn'),       // Botón de búsqueda
+          searchInput = $('.search-input'),  // Campo de búsqueda
+          searchBtn = $('.search-btn'),       // Botón de búsqueda
           articlesGrid = $('.articles-grid'); //Contenedor de artículos
     
     // Almacenar contenido original para poder restaurarlo después de buscar
-    if (articleCards.lenght) {
+    if (articleCards.length) {
       articleCards.forEach(card => {
         // Guarda el contenido original de títulos y párrafos
         card.querySelectorAll('h3, p').forEach(el => {
@@ -204,12 +204,12 @@
       const activeCategory = activeTab ?
                             activeTab.textContent.trim().toLowerCase() : null;
       // Determina si se deben mostrar todas las categorías
-      const showAllCategories = !activeCategory === 'todos';
+      const showAllCategories = !activeCategory || activeCategory === 'todos';
 
       // Procesa cada tarjeta de artículo
       articleCards.forEach(card => {
         // Restaura el contenido original antes de aplicar nuevo filtro
-        card.querySelectorAll('[data-original').forEach(el => {
+        card.querySelectorAll('[data-original]').forEach(el => {
           el.innerHTML = el.getAttribute('data-original');
         });
 
@@ -320,7 +320,7 @@
       }
     };
 
-    if (faqItems.lenght) {
+    if (faqItems.length) {
       faqItems.forEach(item => {
         // Obtiene el elementos de pregunta dentro de cada item
         const question = item.querySelector('.faq-question');
@@ -352,12 +352,12 @@
         // Verifica si el campo está vacío después de quitar espacios
         const isEmpty = !field.value.trim();
         // Añade/quita clase de error según corresponda
-        field.classList.toogle('error', isEmpty);
+        field.classList.toggle('error', isEmpty);
         // Si algñun campo está vacío, marca el formulario como inválido
         if (isEmpty) isValid = false;
       });
 
-      // Sie el formulario no es válido, muestra el mensaje y detiene el proceso
+      // Si  el formulario no es válido, muestra el mensaje y detiene el proceso
       if (!isValid) {
         alert('Por favor completa todos los campos requeridos');
         return;
