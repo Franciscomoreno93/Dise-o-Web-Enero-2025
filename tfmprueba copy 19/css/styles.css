@@ -1436,6 +1436,12 @@ footer {
     height: 15.625rem;
 }
 
+.footer-social-title {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 @media (max-width: 992px) {
     /* Ajustes para tablet grande */
     .slide-content,
