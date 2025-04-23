@@ -1,28 +1,51 @@
-/* 
- * SkateWorld - Estilos Globales Optimizados
- */
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bona Nova SC", serif;
+}
 
 /* Definición de variables globales de colores y estilos */
 :root {
-    /* Colores principales */
+    /* Color principal */
     --primary-color: #ff3e3e;
+    /* Rojo brillante para elementos principales */
     --primary-hover: #e02020;
+    /* Rojo para elementos hover */
+    /* Colores de fondo */
     --dark-bg: #1a1a1a;
+    /* Fondo casi negro para secciones oscuras */
     --light-bg: #f8f8f8;
+    /* Fondo hueso para secciones claras */
+    /* Colores de texto */
     --text-primary: #333;
+    /* Gris oscuro */
     --text-secondary: #666;
+    /* Gris medio para texto secundario */
     --text-light: #ccc;
+    /* Gris claro para otro textos */
     --text-gray: #888;
+    /* Gris alternativo */
+    /* Fondos y bordes de elementos */
     --card-bg: white;
+    /* Blanco para fondos de tarjeta */
     --border-light: #ddd;
+    /* Gris claro para bordes */
     --filter-bg: #eee;
+    /* Gris para elementos de formulario */
     --section-alt-bg: #f1f1f1;
+    /* Blanco hueso para secciones alternadas */
 
-    /* Sombras */
+    /* Sombras con intensidad creciente */
     --shadow-sm: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    /* Sombra pequeña */
     --shadow-md: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.1);
+    /* Sombra media */
     --shadow-lg: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
+    /* Sombra grande */
     --shadow-header: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.3);
+    /* Sombra con mayor opacidad */
 
     /* Transiciones */
     --transition-fast: 0.3s;
@@ -32,37 +55,12 @@
     --section-padding: 5rem 5%;
 }
 
-/* Utilidades - Clases de utilidad para uso general */
-.highlight {
-    background-color: #ffeb3b;
-    color: #000;
-    padding: 0 0.125rem;
-    font-weight: bold;
-}
-
-.no-results {
-    text-align: center;
-    padding: 1.875rem;
-    background: var(--light-bg);
-    border-radius: 0.625rem;
-    margin: 1.25rem 0;
-}
-
-/* Reset y estilos generales - Normalización de estilos base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Bona Nova SC", serif;
-}
-
-/* Estilos base del cuerpo del documento */
+/* Estilos base del cuerpo */
 body {
     background-color: var(--light-bg);
     color: var(--text-primary);
     line-height: 1.6;
     font-size: 16px;
-    /* Base para los rem */
 }
 
 /* Enlaces - Restablecer estilos predeterminados */
@@ -76,13 +74,13 @@ ul {
     list-style: none;
 }
 
-/* Imágenes - Asegurar que sean responsivas */
+/* Imágenes - Asegura responsive */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Header y navegación - Barra de navegación principal */
+/* Header y navegación */
 header {
     background-color: var(--dark-bg);
     color: white;
@@ -93,7 +91,7 @@ header {
     box-shadow: var(--shadow-header);
 }
 
-/* Contenedor del header - Organiza logo y navegación */
+/* Contenedor header */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -101,25 +99,24 @@ header {
     height: 4.375rem;
 }
 
-/* Logo del sitio */
+/* Logo */
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    letter-spacing: 0.0625rem;
+    letter-spacing: 1px;
 }
 
-/* Acento en el logo */
 .logo span {
     color: var(--primary-color);
 }
 
-.logo-img {
+.logo img {
     height: 2.5rem;
     width: auto;
     vertical-align: middle;
 }
 
-/* Contenedor de navegación */
+/* Conteneder de navegación */
 .main-nav ul {
     display: flex;
 }
@@ -160,14 +157,14 @@ header {
     width: 100%;
 }
 
-/* Botón de menú móvil (inicialmente oculto) */
+/* Botón menú móvil */
 .menu-toggle {
     display: none;
     cursor: pointer;
     font-size: 1.5rem;
 }
 
-/* Secciones comunes - Estilos para cabeceras de página */
+/* Secciones comunes */
 .page-header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/fondo.webp');
     background-size: cover;
@@ -181,7 +178,7 @@ header {
     color: white;
 }
 
-/* Título de página */
+/* Título */
 .page-title {
     font-size: 3rem;
     margin-bottom: 1.25rem;
@@ -195,21 +192,20 @@ header {
     font-size: 1.1rem;
 }
 
-/* Títulos de sección */
+/* Títulos sección */
 .section-title {
     text-align: center;
     margin-bottom: 3.125rem;
     position: relative;
 }
 
-/* Texto de título de sección */
 .section-title h2 {
     font-size: 2.5rem;
     text-transform: uppercase;
     display: inline-block;
 }
 
-/* Línea decorativa bajo título */
+/* Línea decorativa */
 .section-title h2::after {
     content: '';
     display: block;
@@ -237,7 +233,7 @@ header {
     background-color: var(--primary-hover);
 }
 
-/* Hero y Slider - Sección principal con slider */
+/* Hero y Slider */
 .hero {
     position: relative;
     height: 80vh;
@@ -340,7 +336,7 @@ header {
     background-color: var(--primary-color);
 }
 
-/* Artículos y Cards - Secciones de contenido destacado */
+/* Artículos y Cards */
 .featured,
 .articles-section {
     padding: var(--section-padding);
@@ -469,7 +465,7 @@ header {
     transition: all var(--transition-fast);
 }
 
-/* Estados hover y activo de pestañas */
+/* Hover y Activo de pestañas */
 .filter-tab:hover,
 .filter-tab.active {
     background-color: var(--primary-color);
@@ -490,7 +486,7 @@ header {
     border: none;
     padding: 0.625rem 0.9375rem;
     flex: 1;
-    min-width: 12.5rem;
+    min-height: 12.5rem;
 }
 
 /* Enfoque en campo de búsqueda */
@@ -591,7 +587,7 @@ header {
     transform: translateX(0.3125rem);
 }
 
-/* About - Sección Acerca de */
+/* About - Sección acerca de */
 .about-hero {
     background-size: cover;
     background-position: center;
@@ -616,7 +612,7 @@ header {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/fondo.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/fondo.webp);
 }
 
 /* Contenido del hero */
@@ -691,12 +687,12 @@ header {
     box-shadow: var(--shadow-lg);
 }
 
-/* Imagen en About */
+/* Imagen en about */
 .about-image img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 0;
     height: 100%;
     object-fit: cover;
 }
@@ -723,7 +719,7 @@ header {
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -0.09375rem;
+    margin-left: -0.9375rem;
 }
 
 /* Elemento de timeline */
@@ -772,7 +768,7 @@ header {
 }
 
 /* Año en timeline */
-.timeline-year {
+.time-line-year {
     color: var(--primary-color);
     font-weight: 700;
     font-size: 1.2rem;
@@ -834,7 +830,7 @@ header {
     padding: 1.25rem;
 }
 
-/* Nombre de miembro */
+/* Nombre de miemrbo */
 .team-name {
     font-size: 1.3rem;
     margin-bottom: 0.3125rem;
@@ -847,7 +843,7 @@ header {
     margin-bottom: 0.9375rem;
 }
 
-/* Biografía de miembro */
+/* Biografía de miemrbo */
 .team-bio {
     color: var(--text-secondary);
     margin-bottom: 0.9375rem;
@@ -912,7 +908,6 @@ header {
     left: 0;
     bottom: 0;
     width: 3.125rem;
-    height: 0.1875rem;
     background-color: var(--primary-color);
 }
 
@@ -988,7 +983,7 @@ header {
     box-shadow: var(--shadow-md);
 }
 
-/* Grupo de formulario */
+/* Grupo de formluario */
 .form-group {
     margin-bottom: 1.25rem;
 }
@@ -1022,7 +1017,7 @@ header {
     background-color: rgba(255, 62, 62, 0.05);
 }
 
-/* Campo de texto multilínea */
+/* Campo de texto mutlilínea */
 textarea.form-control {
     min-height: 9.375rem;
     resize: vertical;
@@ -1048,7 +1043,7 @@ textarea.form-control {
     background-color: var(--primary-hover);
 }
 
-/* FAQ - Preguntas frecuentes */
+/* FAQ */
 .faq-section {
     padding: var(--section-padding);
     background-color: var(--section-alt-bg);
@@ -1086,7 +1081,7 @@ textarea.form-control {
 }
 
 /* Icono en pregunta */
-.faq-question i {
+.faq-question {
     transition: transform var(--transition-fast);
 }
 
@@ -1104,16 +1099,16 @@ textarea.form-control {
 }
 
 /* Respuesta en elemento activo */
-.faq-item.active .faq-answer {
+.faq-item.active .faq-anser {
     max-height: 12.5rem;
     padding: 0 1.25rem 1.25rem;
 }
 
-/* Newsletter - Boletín informativo */
+/* Newsletter */
 .newsletter {
     background-color: var(--dark-bg);
     color: white;
-    padding: 3.75rem 5%;
+    padding: 2.75rem 5%;
     text-align: center;
 }
 
@@ -1152,19 +1147,14 @@ textarea.form-control {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    padding: 0.75rem 1.875rem;
-    border-radius: 0 1.875rem 1.875rem 0;
+    padding: 0.9375rem 1.875rem 0;
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
     transition: background-color var(--transition-fast);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
 }
 
-/* Estado hover de botón */
+/* Estado hover del botón */
 .newsletter-btn:hover {
     background-color: var(--primary-hover);
 }
@@ -1220,7 +1210,7 @@ footer {
     transition: color var(--transition-fast);
 }
 
-/* Estado hover de enlaces */
+/* Estado hover en enlaces */
 .footer-links a:hover {
     color: var(--primary-color);
 }
@@ -1244,7 +1234,7 @@ footer {
     transition: background-color var(--transition-fast);
 }
 
-/* Estado hover de iconos sociales */
+/* Estado hover de iconos soiales */
 .social-icons a:hover {
     background-color: var(--primary-color);
 }
@@ -1284,7 +1274,7 @@ footer {
     border: none;
 }
 
-/* Estilos para artículos individuales */
+/* Estilo para artículos individuales */
 .article-content-container {
     background-color: var(--card-bg);
     border-radius: 0.625rem;
@@ -1361,7 +1351,7 @@ footer {
 }
 
 /* Párrafo con mayor espacio */
-.article-text p.wider-margin {
+.article-text p.widermargin {
     margin: 2.5rem 0;
 }
 
@@ -1387,7 +1377,7 @@ footer {
     margin-bottom: 0.625rem;
 }
 
-/* Actualización de los estilos del menú móvil */
+/* Actualización estilos menú móvil */
 
 /* Aseguramos que cuando el menú móvil está activo, tenga la altura suficiente */
 .main-nav.active {
@@ -1415,12 +1405,12 @@ footer {
     padding: 0.625rem 0;
 }
 
-/* Ajustes adicionales para el ícono del menú */
+/* Ajustes adicionales para el icono del menú */
 .menu-toggle i.fa-times {
     color: var(--primary-color);
 }
 
-/* Estilos para corregir la visualización de imágenes en las tarjetas de artículos usando IDs */
+/* Estilos para corregir la visualización de imágenes en artículos con ids */
 #categoria-trucos-images .article-img,
 #categoria-equipamiento-images .article-img,
 #categoria-cultura-images .article-img,
@@ -1440,7 +1430,24 @@ footer {
     height: 15.625rem;
 }
 
+/* Utilidades - Clases de utilidad para uso general */
+.highlight {
+    background-color: #ffeb3b;
+    color: #000;
+    padding: 0 0.125rem;
+    font-weight: bold;
+}
+
+.no-results {
+    text-align: center;
+    padding: 1.875rem;
+    background: var(--light-bg);
+    border-radius: 0.625rem;
+    margin: 1.25rem 0;
+}
+
 @media (max-width: 992px) {
+
     /* Ajustes para tablet grande */
     .slide-content,
     .slide-heading,
@@ -1547,12 +1554,13 @@ footer {
 }
 
 @media (max-width: 800px) {
+
     /* Estilos para pantallas medianas - Timeline */
     .timeline::after {
-        left: 31px; /* Mover línea central a la izquierda */
+        left: 31px;
     }
-    
-    /* Resetear todos los ítems a ancho completo y alinear a la izquierda */
+
+    /* Resetear items a ancho completo y alinear a la izquierda */
     .timeline-item {
         width: 100%;
         padding-left: 70px;
@@ -1560,13 +1568,13 @@ footer {
         float: none;
         clear: both;
     }
-    
-    /* Asegurar que todos los círculos estén a la izquierda */
+
+    /* Asegura que todos los círuclos estén a la izquierda */
     .timeline-item::after {
         left: 15px;
         right: auto;
     }
-    
+
     /* Ajustar flechas para que todas apunten desde la izquierda */
     .timeline-item.left .timeline-content::before,
     .timeline-item.right .timeline-content::before {
@@ -1575,15 +1583,16 @@ footer {
         border-right-color: white;
         border-left-color: transparent;
     }
-    
-    /* Hacer espacio entre elementos */
+
+    /* Espacio entre elementos */
     .timeline-item {
         margin-bottom: 30px;
     }
 }
 
 @media (max-width: 768px) {
-    /* Ajustes para tablet pequeña y móvil grande */
+
+    /* Ajuste para tablet pequeña y móvil grande */
     .article-content-container {
         padding: 0;
     }
@@ -1624,46 +1633,47 @@ footer {
 }
 
 @media (max-width: 600px) {
-    /* Ajustes específicos para móviles - Timeline */
+
+    /* Ajustes Timeline paramóvil */
     .section-title h2 {
         font-size: 1.8rem;
     }
-    
+
     .timeline::after {
         left: 21px;
         width: 4px;
     }
-    
+
     .timeline-item {
         padding-left: 60px;
-        padding-right: 15px;
+        padding-right: 5px;
         margin-bottom: 25px;
     }
-    
+
     .timeline-item::after {
         width: 16px;
         height: 16px;
         left: 13px;
         border-width: 3px;
     }
-    
+
     .timeline-content {
         padding: 15px;
     }
-    
-    .timeline-year {
+
+    .time-line-year {
         font-size: 0.9rem;
         padding: 3px 10px;
     }
-    
+
     .timeline-title {
         font-size: 1.3rem;
     }
-    
+
     .timeline-text {
         font-size: 0.95rem;
     }
-    
+
     .timeline-item.left .timeline-content::before,
     .timeline-item.right .timeline-content::before {
         border-width: 12px;
@@ -1673,6 +1683,7 @@ footer {
 }
 
 @media (max-width: 576px) {
+
     /* Ajustes para móviles */
     .featured-grid,
     .articles-grid,
@@ -1687,7 +1698,6 @@ footer {
         font-size: 29px;
     }
 
-    /* Hero más pequeño */
     .hero {
         height: 50vh;
     }
@@ -1699,13 +1709,11 @@ footer {
         font-size: 24px;
     }
 
-    /* Títulos reducidos */
     .about-text h3,
     .contact-title {
         font-size: 24px;
     }
 
-    /* Hero about reducido */
     .about-hero {
         height: 300px;
     }
@@ -1723,39 +1731,41 @@ footer {
     .newsletter-btn {
         border-radius: 30px;
     }
+
 }
 
 @media screen and (max-width: 400px) {
-    /* Fix para dispositivos móviles muy pequeños - Timeline */
+
+    /* Fix para dispositivos móviles muy pequeños - timeline */
     .timeline-item {
         padding-left: 50px;
         padding-right: 10px;
     }
-    
+
     .timeline::after {
         left: 18px;
     }
-    
+
     .timeline-item::after {
         left: 10px;
         width: 14px;
         height: 14px;
     }
-    
+
     .timeline-content {
         padding: 12px;
     }
-    
-    .timeline-year {
+
+    .time-line-year {
         font-size: 0.8rem;
         padding: 2px 8px;
     }
-    
+
     .timeline-title {
         font-size: 1.1rem;
         margin: 8px 0;
     }
-    
+
     .timeline-text {
         font-size: 0.9rem;
     }

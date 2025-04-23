@@ -32,6 +32,22 @@
     --section-padding: 5rem 5%;
 }
 
+/* Utilidades - Clases de utilidad para uso general */
+.highlight {
+    background-color: #ffeb3b;
+    color: #000;
+    padding: 0 0.125rem;
+    font-weight: bold;
+}
+
+.no-results {
+    text-align: center;
+    padding: 1.875rem;
+    background: var(--light-bg);
+    border-radius: 0.625rem;
+    margin: 1.25rem 0;
+}
+
 /* Reset y estilos generales - Normalización de estilos base */
 * {
     margin: 0;
@@ -1420,24 +1436,7 @@ footer {
     height: 15.625rem;
 }
 
-/* Utilidades - Clases de utilidad para uso general */
-.highlight {
-    background-color: #ffeb3b;
-    color: #000;
-    padding: 0 0.125rem;
-    font-weight: bold;
-}
-
-.no-results {
-    text-align: center;
-    padding: 1.875rem;
-    background: var(--light-bg);
-    border-radius: 0.625rem;
-    margin: 1.25rem 0;
-}
-
 @media (max-width: 992px) {
-
     /* Ajustes para tablet grande */
     .slide-content,
     .slide-heading,
@@ -1471,20 +1470,45 @@ footer {
     /* Ajustes timeline para vista móvil */
     .timeline::after {
         left: 31px;
+        width: 6px;
+        margin-left: 0;
     }
 
     .timeline-item {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
+        float: none;
+        clear: both;
+        margin-bottom: 30px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        padding-right: 25px;
+        padding-left: 70px;
     }
 
     .timeline-item::after {
         left: 21px;
+        right: auto;
+    }
+
+    .timeline-item.left::after,
+    .timeline-item.right::after {
+        left: 15px;
     }
 
     .timeline-item.right {
         left: 0;
+    }
+
+    .timeline-item.left .timeline-content::before,
+    .timeline-item.right .timeline-content::before {
+        left: -30px;
+        right: auto;
+        border-right-color: white;
+        border-left-color: transparent;
     }
 
     /* Menú móvil */
@@ -1518,8 +1542,43 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+    /* Estilos para pantallas medianas - Timeline */
+    .timeline::after {
+        left: 31px; /* Mover línea central a la izquierda */
+    }
+    
+    /* Resetear todos los ítems a ancho completo y alinear a la izquierda */
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        float: none;
+        clear: both;
+    }
+    
+    /* Asegurar que todos los círculos estén a la izquierda */
+    .timeline-item::after {
+        left: 15px;
+        right: auto;
+    }
+    
+    /* Ajustar flechas para que todas apunten desde la izquierda */
+    .timeline-item.left .timeline-content::before,
+    .timeline-item.right .timeline-content::before {
+        left: -30px;
+        right: auto;
+        border-right-color: white;
+        border-left-color: transparent;
+    }
+    
+    /* Hacer espacio entre elementos */
+    .timeline-item {
+        margin-bottom: 30px;
+    }
+}
 
+@media (max-width: 768px) {
     /* Ajustes para tablet pequeña y móvil grande */
     .article-content-container {
         padding: 0;
@@ -1560,8 +1619,56 @@ footer {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
+    /* Ajustes específicos para móviles - Timeline */
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .timeline::after {
+        left: 21px;
+        width: 4px;
+    }
+    
+    .timeline-item {
+        padding-left: 60px;
+        padding-right: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .timeline-item::after {
+        width: 16px;
+        height: 16px;
+        left: 13px;
+        border-width: 3px;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-year {
+        font-size: 0.9rem;
+        padding: 3px 10px;
+    }
+    
+    .timeline-title {
+        font-size: 1.3rem;
+    }
+    
+    .timeline-text {
+        font-size: 0.95rem;
+    }
+    
+    .timeline-item.left .timeline-content::before,
+    .timeline-item.right .timeline-content::before {
+        border-width: 12px;
+        left: -24px;
+        top: 20px;
+    }
+}
 
+@media (max-width: 576px) {
     /* Ajustes para móviles */
     .featured-grid,
     .articles-grid,
@@ -1611,5 +1718,41 @@ footer {
 
     .newsletter-btn {
         border-radius: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* Fix para dispositivos móviles muy pequeños - Timeline */
+    .timeline-item {
+        padding-left: 50px;
+        padding-right: 10px;
+    }
+    
+    .timeline::after {
+        left: 18px;
+    }
+    
+    .timeline-item::after {
+        left: 10px;
+        width: 14px;
+        height: 14px;
+    }
+    
+    .timeline-content {
+        padding: 12px;
+    }
+    
+    .timeline-year {
+        font-size: 0.8rem;
+        padding: 2px 8px;
+    }
+    
+    .timeline-title {
+        font-size: 1.1rem;
+        margin: 8px 0;
+    }
+    
+    .timeline-text {
+        font-size: 0.9rem;
     }
 }
