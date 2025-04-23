@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos y enlaces a recursos externos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkateWorld - Artículo Historia del Skateboarding</title>
+    <link rel="shortcut icon" href="../images/supremelogo.svg">
+    <!-- Enlaces a bibliotecas externas (Font Awesome y Google Fonts) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nova+Square&display=swap"
+        rel="stylesheet">
+    <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Script JS con atributo defer -->
+    <script defer src="../js/index.js"></script>
+</head>
+
+<body>
+    <!-- Encabezado principal del sitio: Contiene el logo, menú de navegación y botón de menú móvil -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="../html/index.html" title="Página de inicio de SkateWorld">
+                    <img src="../images/logo2.svg" alt="SkateWorld Logo" class="logo-img">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../html/index.html" title="Ir a la página de inicio">Inicio</a></li>
+                    <li><a href="../html/articulos.html" class="active" title="Ver todos los artículos">Artículos</a>
+                    </li>
+                    <li><a href="../html/categorias.html" title="Explorar categorías">Categorías</a></li>
+                    <li><a href="../html/acerca.html" title="Conocer más sobre nosotros">Acerca de</a></li>
+                    <li><a href="../html/contacto.html" title="Contactar con SkateWorld">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabecera de la página específica: Título y descripción del artículo -->
+    <section class="page-header skateboard-equipment">
+        <div>
+            <h1 class="page-title">Guía de Equipamiento Esencial para Skaters</h1>
+            <p class="page-description">Todo lo que necesitas saber para elegir el mejor material de skateboarding según
+                tu nivel, estilo y presupuesto.</p>
+        </div>
+    </section>
+
+    <!-- Contenido principal del artículo: Imagen destacada y texto informativo con diferentes secciones -->
+    <section class="articles-section">
+        <div class="article-content-container">
+            <div class="article-image">
+                <picture>
+                    <source srcset="../images/deck.webp" type="image/jpeg">
+                    <img src="../images/deck.webp" alt="Equipamiento completo de skateboarding" loading="lazy">
+                </picture>
+            </div>
+            <div class="article-text">
+                <span class="card-category">Equipamiento</span>
+                <h2>Cómo Elegir el Material Adecuado para Ti</h2>
+                <p>Elegir el equipamiento adecuado puede marcar una gran diferencia en tu progresión como skater. Cada
+                    componente de tu setup influye en cómo se siente y responde tu tabla, y la configuración ideal varía
+                    según tu estilo de patinaje, nivel de experiencia e incluso tu complexión física. En esta guía,
+                    desglosaremos cada elemento para ayudarte a construir el setup perfecto para tus necesidades.</p>
+
+                <h3>La Tabla: El Corazón de Tu Setup</h3>
+                <p>La tabla es el componente más importante de tu equipamiento. Las tablas varían en anchura
+                    (generalmente entre 7.5" y 9"), longitud, cóncavo y material. Para principiantes, recomendamos una
+                    tabla de anchura media (8" - 8.25") con un cóncavo moderado, que ofrece un buen equilibrio entre
+                    estabilidad y maniobrabilidad. Los skaters de street suelen preferir tablas más estrechas para
+                    facilitar los flips, mientras que los de transición o bowl optan por tablas más anchas que aportan
+                    mayor estabilidad.</p>
+
+                <h3>Trucks: La Base del Control</h3>
+                <p>Los trucks determinan cómo gira y responde tu tabla. El ancho de tus trucks debe corresponder
+                    aproximadamente al ancho de tu tabla. Los trucks altos son ideales para wheels más grandes y trucos
+                    técnicos, mientras que los bajos ofrecen mayor estabilidad y respuesta inmediata para el street
+                    skating. En cuanto a la dureza de los bushings, los más suaves facilitan los giros pero sacrifican
+                    estabilidad, mientras que los más duros son preferidos por skaters que buscan precisión a alta
+                    velocidad.</p>
+
+                <!-- Caja con lista de verificación sobre equipamiento recomendado -->
+                <div class="checklist-box">
+                    <h3>Equipamiento esencial para skaters:</h3>
+                    <ul>
+                        <li><strong>Tabla:</strong> Elige el ancho adecuado según tu estatura y tipo de skateboarding
+                            (7.75"-8.5")</li>
+                        <li><strong>Trucks:</strong> Asegúrate de que coincidan con el ancho de tu tabla y considera la
+                            altura según tu estilo</li>
+                        <li><strong>Ruedas:</strong> Más pequeñas y duras para street (50-54mm/99A), más grandes y
+                            suaves para cruising (54-60mm/78A-90A)</li>
+                        <li><strong>Rodamientos:</strong> Los ABEC 5 o 7 ofrecen un buen equilibrio entre rendimiento y
+                            precio</li>
+                        <li><strong>Protecciones:</strong> Al menos un casco para principiantes; rodilleras y coderas
+                            para rampas y bowls</li>
+                    </ul>
+                </div>
+
+                <h3>Ruedas y Rodamientos: Velocidad y Control</h3>
+                <p>Las ruedas se caracterizan por su diámetro y dureza. Las ruedas pequeñas (50-54mm) son ideales para
+                    street skating, ofreciendo mejor respuesta en trucos técnicos. Las ruedas más grandes (54-60mm) son
+                    mejores para transición, proporcionando mayor velocidad y suavidad. En cuanto a la dureza, las
+                    ruedas más duras (99A-101A) son perfectas para superficies lisas como skateparks, mientras que las
+                    más suaves (78A-90A) absorben mejor las imperfecciones del terreno, ideales para cruising por la
+                    ciudad.</p>
+
+                <h3>Mantenimiento y Cuidado del Equipamiento</h3>
+                <p class="wider-margin">Un buen mantenimiento extenderá significativamente la vida útil de tu equipo.
+                    Limpia regularmente tus rodamientos (puedes usar alcohol isopropílico), rota tus ruedas para que se
+                    desgasten uniformemente, y asegúrate de que todos los tornillos estén bien ajustados antes de cada
+                    sesión. Si patinas en condiciones húmedas, seca completamente tu tabla y rodamientos para prevenir
+                    oxidación y daños en la madera.</p>
+
+                <p>Recuerda que el "mejor equipamiento" es subjetivo y varía según las preferencias personales. No
+                    tengas miedo de experimentar con diferentes configuraciones hasta encontrar lo que se siente mejor
+                    para ti. A medida que progreses, desarrollarás un sentido más fino de lo que funciona para tu estilo
+                    específico. Y aunque un buen equipamiento puede hacer más fácil y agradable tu experiencia, la
+                    práctica constante sigue siendo el factor más importante para mejorar tus habilidades en el
+                    skateboarding.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Newsletter - Formulario de suscripción -->
+    <section class="newsletter">
+        <h2 class="newsletter-title">Suscríbete a Nuestro Newsletter</h2>
+        <p class="newsletter-text">Recibe las últimas noticias, tutoriales y eventos directamente en tu bandeja de
+            entrada.</p>
+        <form class="newsletter-form" action="#" method="post">
+            <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="newsletter-btn">Suscribirme</button>
+        </form>
+    </section>
+
+    <!-- Pie de página - Información de contacto y enlaces -->
+    <footer>
+        <div class="footer-content">
+            <!-- Columna con información -->
+            <div class="footer-column">
+                <h3>Sobre SkateWorld</h3>
+                <p>Somos una comunidad apasionada por el skateboarding, dedicada a compartir conocimientos, experiencias
+                    y novedades del mundo del skate.</p>
+            </div>
+            <!-- Columna de enlaces -->
+            <div class="footer-column">
+                <h3>Enlaces rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="../html/index.html" title="Volver a la página principal">Inicio</a></li>
+                    <li><a href="../html/articulos.html" title="Ver todos los artículos disponibles">Artículos</a></li>
+                    <li><a href="../html/categorias.html" title="Navegar por categorías de contenido">Categorías</a>
+                    </li>
+                    <li><a href="../html/acerca.html" title="Conocer más sobre Skateworld">Acerca de</a></li>
+                    <li><a href="../html/contacto.html" title="Formulario de contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Columna de información de contacto y redes sociales -->
+            <div class="footer-column">
+                <h3>Contáctanos</h3>
+                <p>Email: info@skateworld.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+                <!-- Iconos de redes sociales -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/skateworld" title="Visitar Facebook de Skateworld"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/skateworld" title="Visitar Twitter de Skateworld"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/skateworld" title="Visitar Instagram de Skateworld"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/skateworld" title="Visitar Youtube de Skateworld"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Nota de copyright-->
+        <div class="copyright">
+            <p>&copy; 2025 SkateWorld. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
