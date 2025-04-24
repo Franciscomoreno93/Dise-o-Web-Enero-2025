@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60">
+  <style>
+    .logo-text {
+      font-family: 'Bona Nova SC', serif;
+      font-weight: 700;
+    }
+    .skate {
+      fill: white;
+    }
+    .world {
+      fill: #ff3e3e;
+    }
+  </style>
+  <text x="10" y="45" class="logo-text skate" font-size="42">S</text>
+  <text x="32" y="45" class="logo-text skate" font-size="30">KATE</text>
+  <text x="112" y="45" class="logo-text world" font-size="32">W</text>
+  <text x="145" y="45" class="logo-text world" font-size="30">ORLD</text>
+</svg>
