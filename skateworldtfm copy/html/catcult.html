@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos y enlaces a recursos externos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkateWorld - Categoría Cultura</title>
+    <link rel="shortcut icon" href="../images/supremelogo.svg">
+    <!-- Enlaces a bibliotecas externas -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nova+Square&display=swap"
+        rel="stylesheet">
+    <!-- Enlace a la hoja de estilos -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Script JS con atributo defer -->
+    <script defer src="../js/index.js"></script>
+</head>
+
+<body>
+    <!-- Cabecera con logo y menú principal de navegación -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="../html/index.html" title="Página de inicio de SkateWorld">
+                    <img src="../images/logo2.svg" alt="SkateWorld logo" class="logo-img">
+                </a>
+            </div>
+            <!-- Navegación -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../html/index.html" title="Ir a la página de inicio">Inicio</a></li>
+                    <li><a href="../html/articulos.html" title="Ver todos los artículos">Artículos</a>
+                    </li>
+                    <li><a href="../html/categorias.html" class="active" title="Explorar categorías">Categorías</a></li>
+                    <li><a href="../html/acerca.html" title="Conocer más sobre nosotros">Acerca de</a>
+                    </li>
+                    <li><a href="../html/contacto.html" title="Contactar con SkateWorld">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Botón de menú hamburguesa -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Encabezado de página -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1 class="page-title">Categoría: Cultura</h1>
+            <p class="page-description">Descubre la historia, arte, música y estilo de vida que rodea al mundo del
+                skateboarding.</p>
+        </div>
+    </section>
+
+    <!-- Sección de artículos - Listado de artículos de la categoría Cultura -->
+    <section class="articles-section">
+        <div class="articles-grid" id="categoria-cultura-images">
+            <!-- Artículo 1 - Historia del Skateboarding -->
+            <article class="article-card">
+                <a href="../html/arthistoria.html" class="article-card-link">
+                    <picture>
+                        <source srcset="../images/historiaskate.webp" type="image/jpeg">
+                        <img src="../images/historiaskate.webp"
+                            alt="Imagen histórica de los inicios del skateboarding en California" class="article-img"
+                            loading="lazy">
+                    </picture>
+                    <div class="article-content">
+                        <span class="article-category">Cultura</span>
+                        <h2 class="article-title">Historia del Skateboarding</h2>
+                        <p class="article-excerpt">Un recorrido por los orígenes y evolución del skateboarding, desde
+                            sus humildes inicios hasta convertirse en deporte olímpico.</p>
+                        <!-- Metadatos del artículo: fecha y número de comentarios -->
+                        <div class="article-meta">
+                            <span class="article-date"><i class="far fa-calendar-alt"></i> 25 Marzo, 2025</span>
+                            <span class="article-comments"><i class="far fa-comment"></i> 32 comentarios</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+
+            <!-- Artículo 2 - Documentales de Skate -->
+            <article class="article-card">
+                <a href="../html/artdocu.html" class="article-card-link">
+                    <picture>
+                        <source srcset="../images/documental.webp" type="image/jpeg">
+                        <img src="../images/documental.webp" alt="Fotograma de un documental de skateboarding"
+                            class="article-img" loading="lazy">
+                    </picture>
+                    <div class="article-content">
+                        <span class="article-category">Cultura</span>
+                        <h2 class="article-title">5 Documentales de Skate Imprescindibles</h2>
+                        <p class="article-excerpt">Una selección de los mejores documentales que capturan la esencia,
+                            historia y cultura del skateboarding.</p>
+                        <div class="article-meta">
+                            <span class="article-date"><i class="far fa-calendar-alt"></i> 20 Marzo, 2025</span>
+                            <span class="article-comments"><i class="far fa-comment"></i> 19 comentarios</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Sección de newsletter - Formulario de suscripción -->
+    <section class="newsletter">
+        <h2 class="newsletter-title">Suscríbete a Nuestro Newsletter</h2>
+        <p class="newsletter-text">Recibe las últimas actualizaciones, tutoriales y eventos directamente en tu bandeja
+            de entrada.</p>
+        <form class="newsletter-form" action="#" method="post">
+            <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="newsletter-btn" title="Suscribirse al newsletter">Suscribirme</button>
+        </form>
+    </section>
+
+    <!-- Pie de página - Información del sitio, enlaces y contacto -->
+    <footer>
+        <div class="footer-content">
+            <!-- Columna con información sobre el sitio -->
+            <div class="footer-column">
+                <h3>Sobre SkateWorld</h3>
+                <p>Somos una comunidad apasionada por el skateboarding, dedicada a compartir conocimientos, experiencias
+                    y novedades del mundo del skate.</p>
+            </div>
+            <!-- Columna con enlaces rápidos a las principales secciones -->
+            <div class="footer-column">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="../html/index.html" title="Volver a la página principal">Inicio</a></li>
+                    <li><a href="../html/articulos.html" title="Ver todos los artículos disponibles">Artículos</a></li>
+                    <li><a href="../html/categorias.html" title="Navegar por categorías de contenido">Categorías</a>
+                    </li>
+                    <li><a href="../html/acerca.html" title="Conocer más sobre SkateWorld">Acerca de</a></li>
+                    <li><a href="../html/contacto.html" title="Formulario de contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <!-- Columna con información de contacto y redes sociales -->
+            <div class="footer-column">
+                <h3>Contáctanos</h3>
+                <p>Email: info@skateworld.com</p>
+                <p>Teléfono: +34 123 456 789</p>
+                <!-- Iconos de redes sociales -->
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/skateworld" title="Visitar Facebook de SkateWorld"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="https://www.twitter.com/skateworld" title="Visitar Twitter de SkateWorld"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/skateworld" title="Visitar Instagram de SkateWorld"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/skateworld" title="Canal de YouTube de SkateWorld"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Nota de copyright -->
+        <div class="copyright">
+            <p>&copy; 2025 SkateWorld. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
