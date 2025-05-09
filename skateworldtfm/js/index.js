@@ -38,6 +38,7 @@
 
     /**
      * SLIDER DE IMÁGENES
+     * Me apoyé en la IA para resolver algunos problemas con las funciones del slider.
      */
     // Elementos para el carrusel/slider
     const slides = $$('.slide'),    // Conjunto de diapositivas
